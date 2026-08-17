@@ -45,6 +45,13 @@
 				)
 			)
 		)
+		(instances
+			(project "red-light-panel"
+				(path "/42616fd0-e647-494b-aa56-d94ba4c08af5"
+					(page "6")
+				)
+			)
+		)
 	)
 	(sheet
 		(at 215 20)
@@ -79,6 +86,13 @@
 			(effects
 				(font
 					(size 1 1)
+				)
+			)
+		)
+		(instances
+			(project "red-light-panel"
+				(path "/42616fd0-e647-494b-aa56-d94ba4c08af5"
+					(page "8")
 				)
 			)
 		)
@@ -119,6 +133,13 @@
 				)
 			)
 		)
+		(instances
+			(project "red-light-panel"
+				(path "/42616fd0-e647-494b-aa56-d94ba4c08af5"
+					(page "7")
+				)
+			)
+		)
 	)
 	(sheet
 		(at 85 80)
@@ -153,6 +174,13 @@
 			(effects
 				(font
 					(size 1 1)
+				)
+			)
+		)
+		(instances
+			(project "red-light-panel"
+				(path "/42616fd0-e647-494b-aa56-d94ba4c08af5"
+					(page "5")
 				)
 			)
 		)
@@ -193,6 +221,13 @@
 				)
 			)
 		)
+		(instances
+			(project "red-light-panel"
+				(path "/42616fd0-e647-494b-aa56-d94ba4c08af5"
+					(page "3")
+				)
+			)
+		)
 	)
 	(sheet
 		(at 85 20)
@@ -227,6 +262,13 @@
 			(effects
 				(font
 					(size 1 1)
+				)
+			)
+		)
+		(instances
+			(project "red-light-panel"
+				(path "/42616fd0-e647-494b-aa56-d94ba4c08af5"
+					(page "4")
 				)
 			)
 		)
@@ -267,10 +309,18 @@
 				)
 			)
 		)
+		(instances
+			(project "red-light-panel"
+				(path "/42616fd0-e647-494b-aa56-d94ba4c08af5"
+					(page "2")
+				)
+			)
+		)
 	)
 	(sheet_instances
 		(path "/"
 			(page "1")
 		)
 	)
+	(embedded_fonts no)
 )

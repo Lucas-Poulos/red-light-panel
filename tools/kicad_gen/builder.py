@@ -44,6 +44,28 @@ STOCK_SYM_DIR = "/Applications/KiCad/KiCad.app/Contents/SharedSupport/symbols"
 PROJECT_LIBS_DIR = "/Users/lucaspoulos/kicad-projects/red-light-panel/libs"
 _lib_cache: dict[str, SymbolLib] = {}
 
+# Power-rail nets get a proper KiCad power symbol at every pin instead of
+# a bare GlobalLabel -- the idiomatic convention (a human designer would
+# never leave GND/VBAT as plain text labels). Electrically identical to
+# GlobalLabel (same-named power symbols merge into one net project-wide
+# by the same coincidence-based connectivity, confirmed empirically --
+# see docs/design_notes.md), just uses the semantically-correct symbol.
+# GND/+3V3/VBUS have exact stock matches in power.kicad_sym; VBAT and
+# VBAT_PROT don't (custom pack voltages), so those are hand-added to
+# libs/red-light-panel.kicad_sym as copies of the stock "+BATT" power
+# symbol, renamed. Every stock power symbol's single pin is type
+# `power_in` (not `power_out`) -- placing one does NOT satisfy ERC's
+# power_pin_not_driven check by itself, so the existing PWR_FLAG
+# placements (exactly one per net, project-wide) are still required and
+# unaffected by this.
+POWER_NET_SYMBOLS = {
+    "GND": ("power", "GND", "power"),
+    "3V3": ("power", "+3V3", "power"),
+    "USB_VBUS": ("power", "VBUS", "power"),
+    "VBAT": ("PROJECT", "VBAT", "red-light-panel"),
+    "VBAT_PROT": ("PROJECT", "VBAT_PROT", "red-light-panel"),
+}
+
 
 def _load_lib(lib_filename: str) -> SymbolLib:
     if lib_filename not in _lib_cache:
@@ -206,16 +228,19 @@ def add_part(sch: Schematic, part: Part, project_name: str, embedded: set):
     # flying labels: one per pin that has a net assigned. "NC" places an
     # explicit no-connect flag instead of a label (for intentionally-unused
     # pins -- avoids ERC "pin not connected" without inventing a fake net).
+    # Power-rail nets (see POWER_NET_SYMBOLS) get a real power symbol
+    # instead of a plain label -- the idiomatic KiCad convention.
     #
-    # Uses GlobalLabel (not LocalLabel) -- empirically confirmed (against a
-    # real kicad-cli 10.0.5 install, cross-checked against a prior project's
-    # ERC-clean, wire-free schematics) to connect directly to a coincident
-    # pin with zero wires. This project's net names are unique per sheet
-    # (except the intentionally-shared cross-sheet nets), so using "global"
-    # scope throughout doesn't risk unintended merges -- and it means a net
-    # crosses sheet boundaries by name alone, without needing separate
-    # hierarchical sheet-symbol pins wired on the root sheet. See
-    # docs/design_notes.md "Why global labels instead of sheet pins".
+    # Uses GlobalLabel (not LocalLabel) for everything else -- empirically
+    # confirmed (against a real kicad-cli 10.0.5 install, cross-checked
+    # against a prior project's ERC-clean, wire-free schematics) to
+    # connect directly to a coincident pin with zero wires. This project's
+    # net names are unique per sheet (except the intentionally-shared
+    # cross-sheet nets), so using "global" scope throughout doesn't risk
+    # unintended merges -- and it means a net crosses sheet boundaries by
+    # name alone, without needing separate hierarchical sheet-symbol pins
+    # wired on the root sheet. See docs/design_notes.md "Why global labels
+    # instead of sheet pins".
     #
     # IMPORTANT pin-position quirk (also confirmed empirically): KiCad's
     # symbol library editor uses a Y-up coordinate system, but placed
@@ -230,11 +255,49 @@ def add_part(sch: Schematic, part: Part, project_name: str, embedded: set):
         wx, wy = part.x + p.position.X, part.y - p.position.Y
         if net == "NC":
             sch.noConnects.append(NoConnect(position=Position(wx, wy), uuid=str(uuidlib.uuid4())))
+        elif net in POWER_NET_SYMBOLS:
+            pwr_ref = f"#PWR-{part.ref}-{num}"
+            add_power_symbol(sch, net, wx, wy, embedded, ref=pwr_ref)
         else:
             lbl = GlobalLabel(text=net, shape="passive", position=Position(wx, wy, 0), uuid=str(uuidlib.uuid4()))
             sch.globalLabels.append(lbl)
 
     return pins_def
+
+
+def add_power_symbol(sch: Schematic, net: str, x: float, y: float, embedded: set, ref: str):
+    """Places a power symbol (see POWER_NET_SYMBOLS) for `net` at (x, y)
+    -- every stock/custom power symbol here has its single pin at local
+    (0, 0), so (x, y) IS the connection point directly, no offset math
+    needed. `ref` must be unique project-wide (KiCad's convention of
+    reusing the literal "#PWR" on every instance and letting Annotate
+    renumber them doesn't apply here since nothing ever runs Annotate --
+    see the same issue already solved for PWR_FLAG in docs/design_notes.md)."""
+    lib_file, entry_name, nickname = POWER_NET_SYMBOLS[net]
+    if lib_file == "PROJECT":
+        sym, base = load_project_symbol(entry_name, nickname)
+    else:
+        sym, base = load_stock_symbol(lib_file, entry_name, nickname)
+    lib_id = f"{nickname}:{entry_name}"
+    if lib_id not in embedded:
+        sch.libSymbols.append(sym)
+        if base is not None:
+            sch.libSymbols.append(base)
+        embedded.add(lib_id)
+    pins_def = get_unit_pins(sym, base, 1)
+    inst = SchematicSymbol(
+        libraryNickname=nickname, entryName=entry_name,
+        position=Position(x, y, 0), unit=1, inBom=False, onBoard=False, dnp=False,
+        uuid=str(uuidlib.uuid4()),
+        properties=[
+            _prop("Reference", ref, x + 2, y - 2, hide=True),
+            _prop("Value", net, x + 2, y, hide=True),
+        ],
+        pins={num: str(uuidlib.uuid4()) for num in pins_def},
+        instances=[SymbolProjectInstance(name="red-light-panel", paths=[
+            SymbolProjectPath(sheetInstancePath="/", reference=ref, unit=1)])],
+    )
+    sch.schematicSymbols.append(inst)
 
 
 def add_hier_label(sch: Schematic, net: str, x: float, y: float, shape: str = "bidirectional"):

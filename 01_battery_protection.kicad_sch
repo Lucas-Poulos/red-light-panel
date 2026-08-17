@@ -2,7 +2,7 @@
 	(version 20260306)
 	(generator "eeschema")
 	(generator_version "10.0")
-	(uuid "b4175901-dc2e-46f7-887a-f861c4297b5d")
+	(uuid "6352a708-d0fe-4dbb-86a6-797899b8d314")
 	(paper "A3")
 	(title_block
 		(title "Battery Pack & Protection")
@@ -2324,6 +2324,113 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "power:GND"
+			(power global)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(show_name yes)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "GND"
+				(at 0 -3.81 0)
+				(show_name yes)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name yes)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name yes)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+				(at 0 0 0)
+				(show_name yes)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "GND_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GND_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "power:PWR_FLAG"
 			(power global)
 			(pin_names
@@ -2431,228 +2538,280 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "red-light-panel:VBAT"
+			(power global)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 -3.81 0)
+				(show_name yes)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "VBAT"
+				(at 0 3.556 0)
+				(show_name yes)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name yes)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name yes)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"+BATT\""
+				(at 0 0 0)
+				(show_name yes)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "global power battery"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "VBAT_0_1"
+				(polyline
+					(pts
+						(xy -0.762 1.27) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "VBAT_1_1"
+				(pin power_in line
+					(at 0 0 90)
+					(length 0)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "red-light-panel:VBAT_PROT"
+			(power global)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 -3.81 0)
+				(show_name yes)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "VBAT_PROT"
+				(at 0 3.556 0)
+				(show_name yes)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name yes)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name yes)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"+BATT\""
+				(at 0 0 0)
+				(show_name yes)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "global power battery"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "VBAT_PROT_0_1"
+				(polyline
+					(pts
+						(xy -0.762 1.27) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "VBAT_PROT_1_1"
+				(pin power_in line
+					(at 0 0 90)
+					(length 0)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 	)
 	(no_connect
 		(at 137.46 77.78)
-		(uuid "4429d6bf-dd07-4e2b-9fa0-c676cbf44e38")
-	)
-	(no_connect
-		(at 127.3 52.38)
-		(uuid "808c1adf-b0f3-4a52-a74e-cf3731c2ebdb")
+		(uuid "13621c18-39ba-4215-8375-ba12f1aa4a78")
 	)
 	(no_connect
 		(at 127.3 62.54)
-		(uuid "b664e56e-6551-4420-9b36-8006dd1bb4ca")
+		(uuid "4e2d891c-03b8-4ac4-af7e-1e2d124cbbf0")
 	)
-	(global_label "VBAT_PROT"
-		(shape passive)
-		(at 202.54 39.92 0)
-		(effects
-			(font
-				(size 1 1)
-			)
-		)
-		(uuid "02cd1102-024a-4bd9-a5b9-58a7cae09a35")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 202.54 39.92 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(global_label "I2C_SDA"
-		(shape passive)
-		(at 127.3 44.76 0)
-		(effects
-			(font
-				(size 1 1)
-			)
-		)
-		(uuid "0a3f835f-282b-45fb-8dff-b5772a2ae0b8")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 127.3 44.76 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(global_label "DSG_GATE"
-		(shape passive)
-		(at 194.92 20 0)
-		(effects
-			(font
-				(size 1 1)
-			)
-		)
-		(uuid "0aa25df9-5d35-4f17-9522-9e7d36a84c2e")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 194.92 20 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(global_label "STACK_NEG"
-		(shape passive)
-		(at 134.92 14.92 0)
-		(effects
-			(font
-				(size 1 1)
-			)
-		)
-		(uuid "0b41e84e-358f-4458-b22e-d2a77b0c52d5")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 134.92 14.92 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(global_label "VBAT"
-		(shape passive)
-		(at 202.54 14.92 0)
-		(effects
-			(font
-				(size 1 1)
-			)
-		)
-		(uuid "0bc28f75-c1dc-44ba-9d03-4db44c444a25")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 202.54 14.92 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(global_label "U1_CAP1"
-		(shape passive)
-		(at 185 96.19 0)
-		(effects
-			(font
-				(size 1 1)
-			)
-		)
-		(uuid "0c16049f-91ff-494c-9860-df20e141823f")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 185 96.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(global_label "TAP1"
-		(shape passive)
-		(at 60 42.54 0)
-		(effects
-			(font
-				(size 1 1)
-			)
-		)
-		(uuid "0cfc97ed-6271-4e6a-94b1-f39957843ae6")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 60 42.54 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(global_label "VBAT"
-		(shape passive)
-		(at 140 39.68 0)
-		(effects
-			(font
-				(size 1 1)
-			)
-		)
-		(uuid "10e3d29a-279a-4202-8d9c-1cadf7f7a6f2")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 140 39.68 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(global_label "TAP2"
-		(shape passive)
-		(at 60 34.92 0)
-		(effects
-			(font
-				(size 1 1)
-			)
-		)
-		(uuid "143568a2-f26f-44c5-9ae7-792f4f833d66")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 60 34.92 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(global_label "I2C_SCL"
-		(shape passive)
-		(at 127.3 47.3 0)
-		(effects
-			(font
-				(size 1 1)
-			)
-		)
-		(uuid "2023480b-088a-4b33-abbf-a1dbc985c9f5")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 127.3 47.3 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
+	(no_connect
+		(at 127.3 52.38)
+		(uuid "c6957dba-c5e1-4992-9897-ed218bee3b62")
 	)
 	(global_label "FET_MID"
 		(shape passive)
@@ -2662,261 +2821,9 @@
 				(size 1 1)
 			)
 		)
-		(uuid "21ecf28a-d940-4146-bd04-a58595d6ae3b")
+		(uuid "02f3786b-fa34-4db2-a917-71a69ecd79e6")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 202.54 50.08 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(global_label "GND"
-		(shape passive)
-		(at 140 80.32 0)
-		(effects
-			(font
-				(size 1 1)
-			)
-		)
-		(uuid "25d8f694-912f-4f54-9301-649671802093")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 140 80.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(global_label "FET_MID"
-		(shape passive)
-		(at 202.54 50.08 0)
-		(effects
-			(font
-				(size 1 1)
-			)
-		)
-		(uuid "2e437084-b884-4a8b-a667-c7be33c0b1d6")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 202.54 50.08 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(global_label "TAP1"
-		(shape passive)
-		(at 40 14.92 0)
-		(effects
-			(font
-				(size 1 1)
-			)
-		)
-		(uuid "2e8318be-8187-4b79-96e2-addb520cca71")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 40 14.92 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(global_label "Q3_GATE"
-		(shape passive)
-		(at 84.92 90 0)
-		(effects
-			(font
-				(size 1 1)
-			)
-		)
-		(uuid "3041e533-8866-4d3d-8f2e-8949b75aaa75")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 84.92 90 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(global_label "GND"
-		(shape passive)
-		(at 260 90 0)
-		(effects
-			(font
-				(size 1 1)
-			)
-		)
-		(uuid "3173323f-5bfb-4ca8-b789-075f4b876de5")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 260 90 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(global_label "TAP3"
-		(shape passive)
-		(at 100 22.54 0)
-		(effects
-			(font
-				(size 1 1)
-			)
-		)
-		(uuid "3653f57d-fefb-4b2d-88cb-586c541abb13")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 100 22.54 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(global_label "TAP3"
-		(shape passive)
-		(at 134.92 22.54 0)
-		(effects
-			(font
-				(size 1 1)
-			)
-		)
-		(uuid "38e80d41-1adc-4271-b58f-9742ade3c0c5")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 134.92 22.54 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(global_label "FET_MID"
-		(shape passive)
-		(at 202.54 25.08 0)
-		(effects
-			(font
-				(size 1 1)
-			)
-		)
-		(uuid "48dadfac-b2b8-41cc-9538-cc772942c995")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 202.54 25.08 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(global_label "TAP3"
-		(shape passive)
-		(at 80 34.92 0)
-		(effects
-			(font
-				(size 1 1)
-			)
-		)
-		(uuid "4e444916-1c3a-4df5-b3c6-cbf21d6fefe1")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 80 34.92 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(global_label "VBAT"
-		(shape passive)
-		(at 152.7 57.46 0)
-		(effects
-			(font
-				(size 1 1)
-			)
-		)
-		(uuid "4f5990d2-0b17-4534-a33a-e2270dbd0942")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 152.7 57.46 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(global_label "TAP1"
-		(shape passive)
-		(at 60 22.54 0)
-		(effects
-			(font
-				(size 1 1)
-			)
-		)
-		(uuid "52195b72-8ab9-4510-8ad4-79f99657b6c4")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 60 22.54 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(global_label "STACK_NEG"
-		(shape passive)
-		(at 140 96.19 0)
-		(effects
-			(font
-				(size 1 1)
-			)
-		)
-		(uuid "526f1ac0-6e65-486a-a6af-7e8f68145481")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 140 96.19 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2935,72 +2842,9 @@
 				(size 1 1)
 			)
 		)
-		(uuid "5e9db067-9c93-4bf1-bf7c-1d080ce39dde")
+		(uuid "042d6edf-c50f-43cd-8f2c-c8bc2837273d")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 40 42.54 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(global_label "TAP2"
-		(shape passive)
-		(at 152.7 62.54 0)
-		(effects
-			(font
-				(size 1 1)
-			)
-		)
-		(uuid "5eeae0cb-4021-4470-a562-6054fb9c9e78")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 152.7 62.54 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(global_label "TAP1"
-		(shape passive)
-		(at 134.92 17.46 0)
-		(effects
-			(font
-				(size 1 1)
-			)
-		)
-		(uuid "66d1af37-ae9f-4ac5-bbcd-484a5b9eebea")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 134.92 17.46 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(global_label "TAP3"
-		(shape passive)
-		(at 152.7 60 0)
-		(effects
-			(font
-				(size 1 1)
-			)
-		)
-		(uuid "67503898-1e6d-4eb2-b420-0c1606ccff3f")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 152.7 60 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3019,7 +2863,7 @@
 				(size 1 1)
 			)
 		)
-		(uuid "67774964-f272-4373-a5c7-579298b5fb67")
+		(uuid "0a45c232-df85-44a4-89df-e0f20e1f4fdf")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 60 86.19 0)
 			(hide yes)
@@ -3032,17 +2876,59 @@
 			)
 		)
 	)
-	(global_label "PACK_RAW"
+	(global_label "TAP2"
 		(shape passive)
-		(at 60 93.81 0)
+		(at 152.7 62.54 0)
 		(effects
 			(font
 				(size 1 1)
 			)
 		)
-		(uuid "7405d667-9f9f-405c-9c3d-cdabc593a259")
+		(uuid "119d0d0a-faf3-4cf8-a0d5-ae23eda54ebc")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 60 93.81 0)
+			(at 152.7 62.54 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "TAP1"
+		(shape passive)
+		(at 60 22.54 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+		)
+		(uuid "1328b9df-e1bb-4568-8b56-cf7f25fdb629")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 60 22.54 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "TAP2"
+		(shape passive)
+		(at 134.92 20 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+		)
+		(uuid "15fc1c82-bd1e-4d3b-91c1-e062b135dac4")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 134.92 20 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3055,99 +2941,15 @@
 	)
 	(global_label "GND"
 		(shape passive)
-		(at 152.7 75.24 0)
+		(at 260 90 0)
 		(effects
 			(font
 				(size 1 1)
 			)
 		)
-		(uuid "77c1fd56-e60d-4196-a02d-2b4c75879c22")
+		(uuid "1922efb8-28ae-4fa9-93ed-1c741849606f")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 152.7 75.24 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(global_label "VBAT"
-		(shape passive)
-		(at 152.7 49.84 0)
-		(effects
-			(font
-				(size 1 1)
-			)
-		)
-		(uuid "801155c1-1d3b-46b4-975b-8510da3a6fde")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 152.7 49.84 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(global_label "STACK_NEG"
-		(shape passive)
-		(at 152.7 67.62 0)
-		(effects
-			(font
-				(size 1 1)
-			)
-		)
-		(uuid "8c28c9ab-0d33-4a1e-a6d8-65519d888163")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 152.7 67.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(global_label "TAP3"
-		(shape passive)
-		(at 100 42.54 0)
-		(effects
-			(font
-				(size 1 1)
-			)
-		)
-		(uuid "961a0d73-7cfb-435f-a090-d0739c1351dc")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 100 42.54 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(global_label "GND"
-		(shape passive)
-		(at 93.81 110 0)
-		(effects
-			(font
-				(size 1 1)
-			)
-		)
-		(uuid "98dacbd3-b2e9-468e-a104-bb73acf8c90f")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 93.81 110 0)
+			(at 260 90 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3166,7 +2968,7 @@
 				(size 1 1)
 			)
 		)
-		(uuid "9b4de0dc-6e31-4d20-aff0-cacf352a65db")
+		(uuid "1c273c5e-99c2-44e8-ba47-aa0e46015edf")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 14.92 90 0)
 			(hide yes)
@@ -3179,17 +2981,17 @@
 			)
 		)
 	)
-	(global_label "CHG_GATE"
+	(global_label "U1_REGOUT"
 		(shape passive)
-		(at 127.3 75.24 0)
+		(at 170 96.19 0)
 		(effects
 			(font
 				(size 1 1)
 			)
 		)
-		(uuid "9dc494a5-f359-425f-962f-82d0aae09823")
+		(uuid "2ace4a61-7e09-4d02-847a-9a5635995126")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 127.3 75.24 0)
+			(at 170 96.19 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3200,17 +3002,269 @@
 			)
 		)
 	)
-	(global_label "GND"
+	(global_label "STACK_NEG"
 		(shape passive)
-		(at 140 103.81 0)
+		(at 140 96.19 0)
 		(effects
 			(font
 				(size 1 1)
 			)
 		)
-		(uuid "a9f050d9-2a2d-4217-be01-1437a27ebdae")
+		(uuid "30638e77-edc1-4f74-83c4-e2ddcee7c133")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 140 103.81 0)
+			(at 140 96.19 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "TAP3"
+		(shape passive)
+		(at 80 34.92 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+		)
+		(uuid "3582be93-71aa-4488-b554-030086dd485f")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 80 34.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "TAP1"
+		(shape passive)
+		(at 40 14.92 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+		)
+		(uuid "442f812e-599a-45af-9471-115fc5d241ea")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 40 14.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "PACK_RAW"
+		(shape passive)
+		(at 60 93.81 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+		)
+		(uuid "47d07c0d-daa3-47c5-a4d9-5689756995c5")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 60 93.81 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "DSG_GATE"
+		(shape passive)
+		(at 127.3 72.7 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+		)
+		(uuid "4aebd342-81ff-41fa-bda4-12c695593a25")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 127.3 72.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "FET_MID"
+		(shape passive)
+		(at 202.54 50.08 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+		)
+		(uuid "4c4cb4c1-0c9e-4354-b2ea-564f609c5f04")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 202.54 50.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "STACK_NEG"
+		(shape passive)
+		(at 152.7 72.7 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+		)
+		(uuid "4ea173cf-fe76-4417-bc79-5778edd890ee")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 152.7 72.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "Q3_GATE"
+		(shape passive)
+		(at 110 86.19 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+		)
+		(uuid "52446a5d-e5ed-41b0-aa61-b30e8b97c4e4")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 110 86.19 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "I2C_SCL"
+		(shape passive)
+		(at 127.3 47.3 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+		)
+		(uuid "56718c34-ee27-4651-bed7-f15a05a2d783")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 127.3 47.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "TAP3"
+		(shape passive)
+		(at 152.7 60 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+		)
+		(uuid "58f00c5c-9444-40ee-b76c-204a82ced531")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 152.7 60 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "U1_REGOUT"
+		(shape passive)
+		(at 152.7 44.76 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+		)
+		(uuid "596a560d-e68c-48df-a694-c39f5c8d5e89")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 152.7 44.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "FET_MID"
+		(shape passive)
+		(at 202.54 25.08 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+		)
+		(uuid "63a1b88c-d0ed-495b-8de1-1f103941b231")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 202.54 25.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "TAP2"
+		(shape passive)
+		(at 80 42.54 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+		)
+		(uuid "64eb1d9d-12a9-4459-bfc6-ccfdf4b2c3bc")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 80 42.54 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3229,7 +3283,7 @@
 				(size 1 1)
 			)
 		)
-		(uuid "ae5a3282-6540-4cc5-816f-4f7277fb2abd")
+		(uuid "68ea6274-c724-4704-8ecb-de073463a783")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 60 14.92 0)
 			(hide yes)
@@ -3250,7 +3304,7 @@
 				(size 1 1)
 			)
 		)
-		(uuid "b05c9c08-c7b3-4012-a21b-98cb94b318ff")
+		(uuid "6b4921ee-65a8-483f-ba6b-6f477f70004e")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 152.7 65.08 0)
 			(hide yes)
@@ -3263,101 +3317,17 @@
 			)
 		)
 	)
-	(global_label "PACK_RAW"
+	(global_label "TAP3"
 		(shape passive)
-		(at 92.54 95.08 0)
+		(at 100 22.54 0)
 		(effects
 			(font
 				(size 1 1)
 			)
 		)
-		(uuid "b0854a1a-6f1a-4296-b92e-c584f0a07ed8")
+		(uuid "6d5d01d1-e51a-4233-ad45-edd1ecb6fcb2")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 92.54 95.08 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(global_label "VBAT"
-		(shape passive)
-		(at 110 93.81 0)
-		(effects
-			(font
-				(size 1 1)
-			)
-		)
-		(uuid "b43fec54-808a-406a-8dbd-5308a3d00ec0")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 110 93.81 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(global_label "Q3_GATE"
-		(shape passive)
-		(at 110 86.19 0)
-		(effects
-			(font
-				(size 1 1)
-			)
-		)
-		(uuid "b50298cd-c003-4b9e-b949-9a2956b5f065")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 110 86.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(global_label "U1_CAP1"
-		(shape passive)
-		(at 127.3 67.62 0)
-		(effects
-			(font
-				(size 1 1)
-			)
-		)
-		(uuid "b6e20f62-93cd-4a90-9232-c9533254764c")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 127.3 67.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(global_label "FET_MID"
-		(shape passive)
-		(at 202.54 25.08 0)
-		(effects
-			(font
-				(size 1 1)
-			)
-		)
-		(uuid "bcba3a84-4085-47ab-9957-83ee32219c66")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 202.54 25.08 0)
+			(at 100 22.54 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3376,156 +3346,9 @@
 				(size 1 1)
 			)
 		)
-		(uuid "c2791031-d31f-479f-a5e6-59a49e9a6b9b")
+		(uuid "7344e01b-9bbc-41a7-9e31-a982fcea4eef")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 80 14.92 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(global_label "GND"
-		(shape passive)
-		(at 185 103.81 0)
-		(effects
-			(font
-				(size 1 1)
-			)
-		)
-		(uuid "c4334569-ce34-4296-b891-bb00606ccdee")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 185 103.81 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(global_label "VBAT"
-		(shape passive)
-		(at 134.92 25.08 0)
-		(effects
-			(font
-				(size 1 1)
-			)
-		)
-		(uuid "c61615e8-41f1-4fd4-b7be-2a8b210e42bf")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 134.92 25.08 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(global_label "VBAT"
-		(shape passive)
-		(at 100 14.92 0)
-		(effects
-			(font
-				(size 1 1)
-			)
-		)
-		(uuid "c693e6f4-9bc6-416c-9d42-c1656b19e615")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 100 14.92 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(global_label "GND"
-		(shape passive)
-		(at 170 103.81 0)
-		(effects
-			(font
-				(size 1 1)
-			)
-		)
-		(uuid "c75bd7fb-fb39-49aa-b1e1-5327c4768fb1")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 170 103.81 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(global_label "TAP2"
-		(shape passive)
-		(at 134.92 20 0)
-		(effects
-			(font
-				(size 1 1)
-			)
-		)
-		(uuid "c867214a-ff64-4d38-87bc-014f1220e8f9")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 134.92 20 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(global_label "CHG_GATE"
-		(shape passive)
-		(at 194.92 45 0)
-		(effects
-			(font
-				(size 1 1)
-			)
-		)
-		(uuid "cb536818-d646-44b7-8c1d-9927a9e271b2")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 194.92 45 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(global_label "TAP2"
-		(shape passive)
-		(at 80 42.54 0)
-		(effects
-			(font
-				(size 1 1)
-			)
-		)
-		(uuid "d0a2bec2-0f12-48a1-aec9-2f6458830dde")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 80 42.54 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3544,7 +3367,7 @@
 				(size 1 1)
 			)
 		)
-		(uuid "d3699b3d-b163-4cf4-8f75-9c94c3d69226")
+		(uuid "7a99ce83-b388-42a9-a2d6-176ac50add07")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 202.54 25.08 0)
 			(hide yes)
@@ -3557,17 +3380,143 @@
 			)
 		)
 	)
-	(global_label "U1_REGOUT"
+	(global_label "U1_CAP1"
 		(shape passive)
-		(at 170 96.19 0)
+		(at 185 96.19 0)
 		(effects
 			(font
 				(size 1 1)
 			)
 		)
-		(uuid "d5c18a6d-9105-48ff-92ac-d7e95faa971b")
+		(uuid "7f335585-2e53-4f62-a90c-65dd790db9af")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 170 96.19 0)
+			(at 185 96.19 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "DSG_GATE"
+		(shape passive)
+		(at 194.92 20 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+		)
+		(uuid "8f1fef7a-8366-4586-b4e6-828d288ed815")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 194.92 20 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "Q3_GATE"
+		(shape passive)
+		(at 84.92 90 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+		)
+		(uuid "92694e40-b924-4b55-99d3-31853212c057")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 84.92 90 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "STACK_NEG"
+		(shape passive)
+		(at 152.7 67.62 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+		)
+		(uuid "a16db55b-1e02-4b90-915e-7bfe3ec454e4")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 152.7 67.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "CHG_GATE"
+		(shape passive)
+		(at 194.92 45 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+		)
+		(uuid "a5fc38da-e891-4ce4-a04c-c1a2e35c4864")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 194.92 45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "PACK_RAW"
+		(shape passive)
+		(at 92.54 95.08 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+		)
+		(uuid "ad53ce3f-7999-4adc-b531-2625049fcf0d")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 92.54 95.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "TAP1"
+		(shape passive)
+		(at 60 42.54 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+		)
+		(uuid "b7de5d54-de10-400f-b1ca-edea5e9c9a3f")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 60 42.54 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3586,7 +3535,7 @@
 				(size 1 1)
 			)
 		)
-		(uuid "d79e6c3a-f16a-4255-81d5-6ad6f38dec6f")
+		(uuid "b836ef7e-5ae2-444e-a03b-aa2fa34b2933")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 40 22.54 0)
 			(hide yes)
@@ -3599,17 +3548,38 @@
 			)
 		)
 	)
-	(global_label "STACK_NEG"
+	(global_label "TAP1"
 		(shape passive)
-		(at 152.7 72.7 0)
+		(at 134.92 17.46 0)
 		(effects
 			(font
 				(size 1 1)
 			)
 		)
-		(uuid "d882678d-1261-4eea-bb84-b3ad9a6aa123")
+		(uuid "c08dffce-bd90-47f5-917e-39b6080295a4")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 152.7 72.7 0)
+			(at 134.92 17.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "U1_CAP1"
+		(shape passive)
+		(at 127.3 67.62 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+		)
+		(uuid "ccbd42d2-6caa-43b5-bd77-2e97e128e78c")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 127.3 67.62 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3628,7 +3598,7 @@
 				(size 1 1)
 			)
 		)
-		(uuid "e3096297-0916-4570-a98b-a54fb971d73f")
+		(uuid "ce8602dc-d2e9-4ef4-b0ef-3769aed18a25")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 202.54 50.08 0)
 			(hide yes)
@@ -3641,17 +3611,17 @@
 			)
 		)
 	)
-	(global_label "VBAT"
+	(global_label "TAP3"
 		(shape passive)
-		(at 152.7 54.92 0)
+		(at 100 42.54 0)
 		(effects
 			(font
 				(size 1 1)
 			)
 		)
-		(uuid "e6fce12a-a3ac-4a60-87b6-1b2dd6bef7fe")
+		(uuid "d701f5d1-67b4-41c2-88c4-b0c734eff71c")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 152.7 54.92 0)
+			(at 100 42.54 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3662,17 +3632,17 @@
 			)
 		)
 	)
-	(global_label "VBAT"
+	(global_label "FET_MID"
 		(shape passive)
-		(at 100 34.92 0)
+		(at 202.54 25.08 0)
 		(effects
 			(font
 				(size 1 1)
 			)
 		)
-		(uuid "ec086980-227b-44c5-bf58-859bfd961c1c")
+		(uuid "d75bf3f1-d0ad-49bd-bcd4-5ae2c7543bea")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 100 34.92 0)
+			(at 202.54 25.08 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3683,17 +3653,17 @@
 			)
 		)
 	)
-	(global_label "U1_REGOUT"
+	(global_label "TAP3"
 		(shape passive)
-		(at 152.7 44.76 0)
+		(at 134.92 22.54 0)
 		(effects
 			(font
 				(size 1 1)
 			)
 		)
-		(uuid "efbbc659-3b8d-4698-9d1f-41244e5013dc")
+		(uuid "db5fafbb-9d03-4be6-8165-2b2bc6b9b589")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 152.7 44.76 0)
+			(at 134.92 22.54 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3704,59 +3674,17 @@
 			)
 		)
 	)
-	(global_label "DSG_GATE"
+	(global_label "STACK_NEG"
 		(shape passive)
-		(at 127.3 72.7 0)
+		(at 134.92 14.92 0)
 		(effects
 			(font
 				(size 1 1)
 			)
 		)
-		(uuid "f01c6620-2154-41e6-befb-e6b4d716908b")
+		(uuid "dcd118f9-844a-46a1-b840-aab4ccc2e63c")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 127.3 72.7 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(global_label "VBAT"
-		(shape passive)
-		(at 86.19 110 0)
-		(effects
-			(font
-				(size 1 1)
-			)
-		)
-		(uuid "f052f9d7-d123-418d-b41b-e63f0d34f124")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 86.19 110 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(global_label "TAP2"
-		(shape passive)
-		(at 80 22.54 0)
-		(effects
-			(font
-				(size 1 1)
-			)
-		)
-		(uuid "f385d2d1-b1f3-4b10-95b6-17a55ebc18f1")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 80 22.54 0)
+			(at 134.92 14.92 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3775,7 +3703,7 @@
 				(size 1 1)
 			)
 		)
-		(uuid "f47cf28c-15fa-47ab-a3d6-786ae4e30b9a")
+		(uuid "e0865eee-34cb-4544-8ffe-ddab48c56508")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 40 34.92 0)
 			(hide yes)
@@ -3788,17 +3716,59 @@
 			)
 		)
 	)
-	(global_label "VBAT"
+	(global_label "CHG_GATE"
 		(shape passive)
-		(at 92.54 84.92 0)
+		(at 127.3 75.24 0)
 		(effects
 			(font
 				(size 1 1)
 			)
 		)
-		(uuid "f729c9d7-1a85-491f-bee7-136b2bbf3958")
+		(uuid "e08f70f2-b0ed-461e-8685-6838bef41301")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 92.54 84.92 0)
+			(at 127.3 75.24 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "I2C_SDA"
+		(shape passive)
+		(at 127.3 44.76 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+		)
+		(uuid "e9bfc549-7e55-460f-be48-3719eedffac0")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 127.3 44.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "TAP2"
+		(shape passive)
+		(at 60 34.92 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+		)
+		(uuid "efc17acb-3c53-4c86-aea2-8febce6cd95d")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 60 34.92 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3817,7 +3787,7 @@
 				(size 1 1)
 			)
 		)
-		(uuid "f8abdff7-0c74-441a-9b9d-624c362de703")
+		(uuid "f959b276-e808-446f-a1cc-0e7ce99cb72d")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 14.92 92.54 0)
 			(hide yes)
@@ -3830,124 +3800,23 @@
 			)
 		)
 	)
-	(symbol
-		(lib_id "Diode:SMAJ24CA")
-		(at 90 110 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "11ce3555-1d8e-40e7-8136-4cda20b2dcff")
-		(property "Reference" "D1"
-			(at 95 104 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
+	(global_label "TAP2"
+		(shape passive)
+		(at 80 22.54 0)
+		(effects
+			(font
+				(size 1 1)
 			)
 		)
-		(property "Value" "SMAJ24CA"
-			(at 95 106 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Footprint" "Diode_SMD:D_SMA"
-			(at 95 108 0)
+		(uuid "fe68e174-196b-44e8-9db5-44d81fb44569")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 80 22.54 0)
 			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.littelfuse.com/media?resourcetype=datasheets&itemid=75e32973-b177-4ee3-a0ff-cedaf1abdb93&filename=smaj-datasheet"
-			(at 95 110 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 90 110 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "SMAJ24CA"
-			(at 95 112 0)
-			(hide yes)
-			(show_name yes)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Manufacturer" "Littelfuse"
-			(at 95 114 0)
-			(hide yes)
-			(show_name yes)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "DigiKey_PN" "F5351CT-ND"
-			(at 95 116 0)
-			(hide yes)
-			(show_name yes)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Sheet" "1"
-			(at 95 118 0)
-			(hide yes)
-			(show_name yes)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "f15febbb-c52b-459f-a419-1283426f7a1d")
-		)
-		(pin "2"
-			(uuid "3a5d5492-cb34-454d-85e0-496fc27712ca")
-		)
-		(instances
-			(project "red-light-panel"
-				(path "/42616fd0-e647-494b-aa56-d94ba4c08af5/f5e52836-6f85-40ef-9140-3b11a74572f8"
-					(reference "D1")
-					(unit 1)
 				)
 			)
 		)
@@ -3962,7 +3831,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "12ada729-c390-4cd1-b3e3-6a3b6c01d1cf")
+		(uuid "04bba254-b3fa-4043-a2a2-bc3ea06d425e")
 		(property "Reference" "BT8"
 			(at 105 34 0)
 			(show_name no)
@@ -4060,2051 +3929,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "77316c10-03e1-43a8-99e1-67aa3551c225")
+			(uuid "e48cae09-e064-4090-af7a-e502991a3acb")
 		)
 		(pin "2"
-			(uuid "31b1489a-834a-4260-a422-3a9a35332000")
+			(uuid "5131b4c2-ebc6-4588-ac1d-2e30c8e97ed6")
 		)
 		(instances
 			(project "red-light-panel"
 				(path "/42616fd0-e647-494b-aa56-d94ba4c08af5/f5e52836-6f85-40ef-9140-3b11a74572f8"
 					(reference "BT8")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Transistor_FET:CSD18540Q5B")
-		(at 200 45 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "385d9d48-354e-40a4-95ad-371522ba0434")
-		(property "Reference" "Q2"
-			(at 205 39 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Value" "CSD18540Q5B"
-			(at 205 41 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:TDSON-8-1"
-			(at 205 43 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Datasheet" "http://www.ti.com/lit/gpn/csd18540q5b"
-			(at 205 45 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 200 45 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "CSD18540Q5B"
-			(at 205 47 0)
-			(hide yes)
-			(show_name yes)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Manufacturer" "Texas Instruments"
-			(at 205 49 0)
-			(hide yes)
-			(show_name yes)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "DigiKey_PN" "296-37312-1-ND"
-			(at 205 51 0)
-			(hide yes)
-			(show_name yes)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Sheet" "1"
-			(at 205 53 0)
-			(hide yes)
-			(show_name yes)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "6c6a1e4d-d29a-4a9c-b798-0f3aa408e29f")
-		)
-		(pin "2"
-			(uuid "35f0a6f8-032f-499e-a5f6-79e64296aed5")
-		)
-		(pin "3"
-			(uuid "cc854d1b-b912-42b0-a96a-a682afbbb39d")
-		)
-		(pin "4"
-			(uuid "27055a7b-e318-4bfd-8ed3-e002f7b3a68d")
-		)
-		(pin "5"
-			(uuid "c1fc2d22-bcc2-426f-98ce-428ebffbcbcb")
-		)
-		(instances
-			(project "red-light-panel"
-				(path "/42616fd0-e647-494b-aa56-d94ba4c08af5/f5e52836-6f85-40ef-9140-3b11a74572f8"
-					(reference "Q2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:Battery_Cell")
-		(at 80 20 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "400bde17-4bef-4201-8312-a58e5f04074e")
-		(property "Reference" "BT5"
-			(at 85 14 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Value" "INR18650-30Q"
-			(at 85 16 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Footprint" "Battery:BatteryHolder_Keystone_1042_1x18650"
-			(at 85 18 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.dnkpower.com/wp-content/uploads/2018/10/INR18650-30Q.pdf"
-			(at 85 20 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 80 20 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "Samsung INR18650-30Q"
-			(at 85 22 0)
-			(hide yes)
-			(show_name yes)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Manufacturer" "Samsung SDI"
-			(at 85 24 0)
-			(hide yes)
-			(show_name yes)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "DigiKey_PN" "INR18650-30Q-B-ND"
-			(at 85 26 0)
-			(hide yes)
-			(show_name yes)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Sheet" "1"
-			(at 85 28 0)
-			(hide yes)
-			(show_name yes)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "5c40ad4d-5e48-4277-b58f-821f6180c1aa")
-		)
-		(pin "2"
-			(uuid "9c1f5353-2e76-4dcb-9717-c8fff86aa844")
-		)
-		(instances
-			(project "red-light-panel"
-				(path "/42616fd0-e647-494b-aa56-d94ba4c08af5/f5e52836-6f85-40ef-9140-3b11a74572f8"
-					(reference "BT5")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:Battery_Cell")
-		(at 60 20 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "59899af0-bc4a-425f-b33f-ea89c1ff6da9")
-		(property "Reference" "BT3"
-			(at 65 14 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Value" "INR18650-30Q"
-			(at 65 16 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Footprint" "Battery:BatteryHolder_Keystone_1042_1x18650"
-			(at 65 18 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.dnkpower.com/wp-content/uploads/2018/10/INR18650-30Q.pdf"
-			(at 65 20 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 60 20 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "Samsung INR18650-30Q"
-			(at 65 22 0)
-			(hide yes)
-			(show_name yes)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Manufacturer" "Samsung SDI"
-			(at 65 24 0)
-			(hide yes)
-			(show_name yes)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "DigiKey_PN" "INR18650-30Q-B-ND"
-			(at 65 26 0)
-			(hide yes)
-			(show_name yes)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Sheet" "1"
-			(at 65 28 0)
-			(hide yes)
-			(show_name yes)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "14fad66b-2782-4e08-9241-58ad4d17e93f")
-		)
-		(pin "2"
-			(uuid "957c93fb-4b10-4c0f-81c6-72b6213dc16d")
-		)
-		(instances
-			(project "red-light-panel"
-				(path "/42616fd0-e647-494b-aa56-d94ba4c08af5/f5e52836-6f85-40ef-9140-3b11a74572f8"
-					(reference "BT3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector_Generic:Conn_01x02")
-		(at 20 90 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "59d8c0b9-cd42-402f-8c21-aa949bf45dae")
-		(property "Reference" "J2"
-			(at 25 84 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Value" "Molex 43045-0200"
-			(at 25 86 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Footprint" "Connector_Molex:Molex_Micro-Fit_3.0_43045-0200_2x01_P3.00mm_Horizontal"
-			(at 25 88 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.molex.com/pdm_docs/sd/430450200_sd.pdf"
-			(at 25 90 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 20 90 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "43045-0200"
-			(at 25 92 0)
-			(hide yes)
-			(show_name yes)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Manufacturer" "Molex"
-			(at 25 94 0)
-			(hide yes)
-			(show_name yes)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "DigiKey_PN" "WM1857-ND"
-			(at 25 96 0)
-			(hide yes)
-			(show_name yes)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Sheet" "1"
-			(at 25 98 0)
-			(hide yes)
-			(show_name yes)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "7692b3a0-74e5-42ac-91f1-e4efa5006cc0")
-		)
-		(pin "2"
-			(uuid "426458d7-4640-42b6-a6eb-59cc323bb873")
-		)
-		(instances
-			(project "red-light-panel"
-				(path "/42616fd0-e647-494b-aa56-d94ba4c08af5/f5e52836-6f85-40ef-9140-3b11a74572f8"
-					(reference "J2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 140 100 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "6c9cf2ac-6bd1-4d04-99f3-9b0938ef2a25")
-		(property "Reference" "R1"
-			(at 145 94 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Value" "0.01R 1%"
-			(at 145 96 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_Shunt_Vishay_WSK2512_6332Metric_T2.21mm"
-			(at 145 98 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.vishay.com/docs/30112/wsl.pdf"
-			(at 145 100 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 140 100 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "WSL2512R0100FEA"
-			(at 145 102 0)
-			(hide yes)
-			(show_name yes)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Manufacturer" "Vishay Dale"
-			(at 145 104 0)
-			(hide yes)
-			(show_name yes)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "DigiKey_PN" "541-2455-1-ND"
-			(at 145 106 0)
-			(hide yes)
-			(show_name yes)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Sheet" "1"
-			(at 145 108 0)
-			(hide yes)
-			(show_name yes)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "dbde4a29-685b-41ba-aef3-52296bf45f38")
-		)
-		(pin "2"
-			(uuid "ca3b38ef-6f47-4f36-899a-d0660674100d")
-		)
-		(instances
-			(project "red-light-panel"
-				(path "/42616fd0-e647-494b-aa56-d94ba4c08af5/f5e52836-6f85-40ef-9140-3b11a74572f8"
-					(reference "R1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Transistor_FET:AO3401A")
-		(at 90 90 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "79a99e95-1159-448a-a118-0f890115e036")
-		(property "Reference" "Q3"
-			(at 95 84 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Value" "AO3401A"
-			(at 95 86 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
-			(at 95 88 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Datasheet" "http://www.aosmd.com/pdfs/datasheet/AO3401A.pdf"
-			(at 95 90 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 90 90 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "AO3401A"
-			(at 95 92 0)
-			(hide yes)
-			(show_name yes)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Manufacturer" "Alpha & Omega Semiconductor"
-			(at 95 94 0)
-			(hide yes)
-			(show_name yes)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "DigiKey_PN" "AO3401A-DICT-ND"
-			(at 95 96 0)
-			(hide yes)
-			(show_name yes)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Sheet" "1"
-			(at 95 98 0)
-			(hide yes)
-			(show_name yes)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "1b2f54ca-ec32-45e4-85a1-6d6ea0eb0168")
-		)
-		(pin "2"
-			(uuid "c9b407c9-beb8-4268-b36b-bf12379b5d89")
-		)
-		(pin "3"
-			(uuid "4dbc2855-eea8-40fa-a6ae-29ff25d1af2b")
-		)
-		(instances
-			(project "red-light-panel"
-				(path "/42616fd0-e647-494b-aa56-d94ba4c08af5/f5e52836-6f85-40ef-9140-3b11a74572f8"
-					(reference "Q3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 110 90 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "82035269-d385-483d-8a58-fbfd1f3be46a")
-		(property "Reference" "R90"
-			(at 115 84 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Value" "100k"
-			(at 115 86 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 115 88 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 115 90 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 110 90 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "RC0603FR-07100KL"
-			(at 115 92 0)
-			(hide yes)
-			(show_name yes)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Manufacturer" "Yageo"
-			(at 115 94 0)
-			(hide yes)
-			(show_name yes)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "DigiKey_PN" "311-100KHRCT-ND"
-			(at 115 96 0)
-			(hide yes)
-			(show_name yes)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Sheet" "1"
-			(at 115 98 0)
-			(hide yes)
-			(show_name yes)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "f2a737b0-3b37-418c-af5f-20514356efec")
-		)
-		(pin "2"
-			(uuid "73039599-e7fb-4d0d-bd21-c3cbaffb908d")
-		)
-		(instances
-			(project "red-light-panel"
-				(path "/42616fd0-e647-494b-aa56-d94ba4c08af5/f5e52836-6f85-40ef-9140-3b11a74572f8"
-					(reference "R90")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:Battery_Cell")
-		(at 80 40 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "845c6b77-afba-4785-ab35-d2bab929984e")
-		(property "Reference" "BT6"
-			(at 85 34 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Value" "INR18650-30Q"
-			(at 85 36 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Footprint" "Battery:BatteryHolder_Keystone_1042_1x18650"
-			(at 85 38 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.dnkpower.com/wp-content/uploads/2018/10/INR18650-30Q.pdf"
-			(at 85 40 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 80 40 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "Samsung INR18650-30Q"
-			(at 85 42 0)
-			(hide yes)
-			(show_name yes)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Manufacturer" "Samsung SDI"
-			(at 85 44 0)
-			(hide yes)
-			(show_name yes)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "DigiKey_PN" "INR18650-30Q-B-ND"
-			(at 85 46 0)
-			(hide yes)
-			(show_name yes)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Sheet" "1"
-			(at 85 48 0)
-			(hide yes)
-			(show_name yes)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "43004ff2-a490-469d-afa5-ded20e660e09")
-		)
-		(pin "2"
-			(uuid "b64a4d44-5c43-40f3-ba9a-c08b463a9710")
-		)
-		(instances
-			(project "red-light-panel"
-				(path "/42616fd0-e647-494b-aa56-d94ba4c08af5/f5e52836-6f85-40ef-9140-3b11a74572f8"
-					(reference "BT6")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 185 100 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "8ba3e2af-651a-404e-9e10-6115d62d3756")
-		(property "Reference" "C91"
-			(at 190 94 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Value" "0.1uF (added, flagged)"
-			(at 190 96 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 190 98 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 190 100 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 185 100 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" ""
-			(at 190 102 0)
-			(hide yes)
-			(show_name yes)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Manufacturer" ""
-			(at 190 104 0)
-			(hide yes)
-			(show_name yes)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "DigiKey_PN" ""
-			(at 190 106 0)
-			(hide yes)
-			(show_name yes)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Sheet" "1"
-			(at 190 108 0)
-			(hide yes)
-			(show_name yes)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "a108597f-c1a1-42f0-8c29-01830c85db12")
-		)
-		(pin "2"
-			(uuid "b0a954ff-9a40-453b-8fbc-30b3719ba3ea")
-		)
-		(instances
-			(project "red-light-panel"
-				(path "/42616fd0-e647-494b-aa56-d94ba4c08af5/f5e52836-6f85-40ef-9140-3b11a74572f8"
-					(reference "C91")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:Fuse")
-		(at 60 90 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "9c55830e-f33e-4e6d-b4ed-32fe05f23499")
-		(property "Reference" "F1"
-			(at 65 84 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Value" "0.25A resettable"
-			(at 65 86 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Footprint" "Fuse:Fuse_BelFuse_0ZRE0025FF_L9.6mm_W3.8mm"
-			(at 65 88 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.belfuse.com/resources/datasheets/circuitprotection/ds-cp-0zre-series.pdf"
-			(at 65 90 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 60 90 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "0ZRE0025FF (corrected from placeholder MICROSMD250F/16-2 -- FLAG FOR REVIEW)"
-			(at 65 92 0)
-			(hide yes)
-			(show_name yes)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Manufacturer" "Bel Fuse"
-			(at 65 94 0)
-			(hide yes)
-			(show_name yes)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "DigiKey_PN" "507-1677-1-ND"
-			(at 65 96 0)
-			(hide yes)
-			(show_name yes)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Sheet" "1"
-			(at 65 98 0)
-			(hide yes)
-			(show_name yes)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "806698e6-55b2-4554-8737-caa920c65b71")
-		)
-		(pin "2"
-			(uuid "e49b1004-b80c-48bd-9a45-b7ea61650ead")
-		)
-		(instances
-			(project "red-light-panel"
-				(path "/42616fd0-e647-494b-aa56-d94ba4c08af5/f5e52836-6f85-40ef-9140-3b11a74572f8"
-					(reference "F1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 170 100 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "b1997a58-cc65-413e-93e4-6ce7f791ef8e")
-		(property "Reference" "C90"
-			(at 175 94 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Value" "1uF (added, flagged)"
-			(at 175 96 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 175 98 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 175 100 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 170 100 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" ""
-			(at 175 102 0)
-			(hide yes)
-			(show_name yes)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Manufacturer" ""
-			(at 175 104 0)
-			(hide yes)
-			(show_name yes)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "DigiKey_PN" ""
-			(at 175 106 0)
-			(hide yes)
-			(show_name yes)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Sheet" "1"
-			(at 175 108 0)
-			(hide yes)
-			(show_name yes)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "6f7897fa-6312-4361-bbb0-64f3ce1ab660")
-		)
-		(pin "2"
-			(uuid "194c0a90-33b4-403a-bd8f-9f0fd57a9481")
-		)
-		(instances
-			(project "red-light-panel"
-				(path "/42616fd0-e647-494b-aa56-d94ba4c08af5/f5e52836-6f85-40ef-9140-3b11a74572f8"
-					(reference "C90")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Battery_Management:BQ76920PW")
-		(at 140 60 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "bb7e149f-393a-4b96-8367-841d55fb1ffb")
-		(property "Reference" "U1"
-			(at 145 54 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Value" "BQ76920PW"
-			(at 145 56 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Footprint" "Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm"
-			(at 145 58 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/bq76920.pdf"
-			(at 145 60 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 140 60 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "BQ7692000PWR"
-			(at 145 62 0)
-			(hide yes)
-			(show_name yes)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Manufacturer" "Texas Instruments"
-			(at 145 64 0)
-			(hide yes)
-			(show_name yes)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "DigiKey_PN" "296-37299-1-ND"
-			(at 145 66 0)
-			(hide yes)
-			(show_name yes)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Sheet" "1"
-			(at 145 68 0)
-			(hide yes)
-			(show_name yes)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(pin "6"
-			(uuid "9a1b333a-9541-4e6d-8eaf-56befe23bf89")
-		)
-		(pin "7"
-			(uuid "7e01d9e7-7ab0-40c6-9620-0107e270e42d")
-		)
-		(pin "8"
-			(uuid "d049b3db-e517-48a6-99c4-fda271045e94")
-		)
-		(pin "9"
-			(uuid "c319d739-3703-4963-8326-5d851be14d41")
-		)
-		(pin "10"
-			(uuid "28d3eb32-1437-4ec1-90a9-d9ce990a5f8d")
-		)
-		(pin "11"
-			(uuid "66317ba6-bd00-49c8-9b76-f4866a853f60")
-		)
-		(pin "12"
-			(uuid "9d78d2ce-0812-4f2b-9f78-3ceae3776138")
-		)
-		(pin "13"
-			(uuid "a3b93894-00b4-4a58-a346-ebd3de5d764c")
-		)
-		(pin "14"
-			(uuid "0ae6c092-ac86-4bc2-85a6-96309993ac0e")
-		)
-		(pin "15"
-			(uuid "4510ce99-168f-4b76-8a50-a32a4ed4f94b")
-		)
-		(pin "16"
-			(uuid "75ed2054-b5a1-417d-99a7-39c02988a75a")
-		)
-		(pin "17"
-			(uuid "47090f38-f177-477f-954b-e1fe1012922f")
-		)
-		(pin "18"
-			(uuid "4c000208-39f3-4d78-be39-9b0cd3ffda58")
-		)
-		(pin "19"
-			(uuid "2703b3ba-9ae7-4829-91c8-f76828b4f4e9")
-		)
-		(pin "20"
-			(uuid "20e36da5-201b-4054-97fe-92ee76c91b22")
-		)
-		(pin "1"
-			(uuid "c4a6d398-1c72-4dfa-a7c6-e934fc331575")
-		)
-		(pin "2"
-			(uuid "07296d57-ac00-428f-83ac-3628ec28d58e")
-		)
-		(pin "3"
-			(uuid "3a1d720b-c1a7-4f80-9d35-9b98698e3b1d")
-		)
-		(pin "4"
-			(uuid "baf9a5ed-320d-4d75-9f12-71fb36c1b4b9")
-		)
-		(pin "5"
-			(uuid "86ed97ea-602f-4121-9e40-361af8152515")
-		)
-		(instances
-			(project "red-light-panel"
-				(path "/42616fd0-e647-494b-aa56-d94ba4c08af5/f5e52836-6f85-40ef-9140-3b11a74572f8"
-					(reference "U1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:Battery_Cell")
-		(at 60 40 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "bfc1b1e4-6e06-4d24-8131-0a875dfd76c5")
-		(property "Reference" "BT4"
-			(at 65 34 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Value" "INR18650-30Q"
-			(at 65 36 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Footprint" "Battery:BatteryHolder_Keystone_1042_1x18650"
-			(at 65 38 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.dnkpower.com/wp-content/uploads/2018/10/INR18650-30Q.pdf"
-			(at 65 40 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 60 40 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "Samsung INR18650-30Q"
-			(at 65 42 0)
-			(hide yes)
-			(show_name yes)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Manufacturer" "Samsung SDI"
-			(at 65 44 0)
-			(hide yes)
-			(show_name yes)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "DigiKey_PN" "INR18650-30Q-B-ND"
-			(at 65 46 0)
-			(hide yes)
-			(show_name yes)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Sheet" "1"
-			(at 65 48 0)
-			(hide yes)
-			(show_name yes)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "b610bfed-df11-45ce-9b3e-322ce1feff54")
-		)
-		(pin "2"
-			(uuid "662e3c4a-ebde-4ce8-9bb9-d03c86e47d22")
-		)
-		(instances
-			(project "red-light-panel"
-				(path "/42616fd0-e647-494b-aa56-d94ba4c08af5/f5e52836-6f85-40ef-9140-3b11a74572f8"
-					(reference "BT4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:Battery_Cell")
-		(at 100 20 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "c895e07f-b454-4f39-94a5-a179647514cf")
-		(property "Reference" "BT7"
-			(at 105 14 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Value" "INR18650-30Q"
-			(at 105 16 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Footprint" "Battery:BatteryHolder_Keystone_1042_1x18650"
-			(at 105 18 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.dnkpower.com/wp-content/uploads/2018/10/INR18650-30Q.pdf"
-			(at 105 20 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 100 20 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "Samsung INR18650-30Q"
-			(at 105 22 0)
-			(hide yes)
-			(show_name yes)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Manufacturer" "Samsung SDI"
-			(at 105 24 0)
-			(hide yes)
-			(show_name yes)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "DigiKey_PN" "INR18650-30Q-B-ND"
-			(at 105 26 0)
-			(hide yes)
-			(show_name yes)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Sheet" "1"
-			(at 105 28 0)
-			(hide yes)
-			(show_name yes)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "53fc66be-65a2-465f-9115-ef19f82e97b9")
-		)
-		(pin "2"
-			(uuid "0230884e-54ce-40a0-b2e4-07d0c7a9c296")
-		)
-		(instances
-			(project "red-light-panel"
-				(path "/42616fd0-e647-494b-aa56-d94ba4c08af5/f5e52836-6f85-40ef-9140-3b11a74572f8"
-					(reference "BT7")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Transistor_FET:CSD18540Q5B")
-		(at 200 20 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "d293ebbb-f3c5-4adf-a9d9-17b5831c040a")
-		(property "Reference" "Q1"
-			(at 205 14 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Value" "CSD18540Q5B"
-			(at 205 16 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:TDSON-8-1"
-			(at 205 18 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Datasheet" "http://www.ti.com/lit/gpn/csd18540q5b"
-			(at 205 20 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 200 20 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "CSD18540Q5B"
-			(at 205 22 0)
-			(hide yes)
-			(show_name yes)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Manufacturer" "Texas Instruments"
-			(at 205 24 0)
-			(hide yes)
-			(show_name yes)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "DigiKey_PN" "296-37312-1-ND"
-			(at 205 26 0)
-			(hide yes)
-			(show_name yes)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Sheet" "1"
-			(at 205 28 0)
-			(hide yes)
-			(show_name yes)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "12639f3a-c789-4cab-b675-7ea464b1fd0d")
-		)
-		(pin "2"
-			(uuid "e1133086-34f5-438b-8e7a-00f984ab5f21")
-		)
-		(pin "3"
-			(uuid "b88da44f-539a-4e3c-83c2-b07f6c58a1cf")
-		)
-		(pin "4"
-			(uuid "7cba2768-b83f-4ecf-9554-0a25c8a2698c")
-		)
-		(pin "5"
-			(uuid "80048b2f-0fc1-48a3-80f6-bf38e5e4f816")
-		)
-		(instances
-			(project "red-light-panel"
-				(path "/42616fd0-e647-494b-aa56-d94ba4c08af5/f5e52836-6f85-40ef-9140-3b11a74572f8"
-					(reference "Q1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector_Generic:Conn_01x05")
-		(at 140 20 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "e5545353-33ff-40a3-b6dc-57e915a9f32b")
-		(property "Reference" "J1"
-			(at 145 14 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Value" "JST B5B-XH-A"
-			(at 145 16 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Footprint" "Connector_JST:JST_XH_B5B-XH-A_1x05_P2.50mm_Vertical"
-			(at 145 18 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.jst-mfg.com/product/pdf/eng/eXH.pdf"
-			(at 145 20 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 140 20 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "B5B-XH-A"
-			(at 145 22 0)
-			(hide yes)
-			(show_name yes)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Manufacturer" "JST"
-			(at 145 24 0)
-			(hide yes)
-			(show_name yes)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "DigiKey_PN" "455-1719-ND"
-			(at 145 26 0)
-			(hide yes)
-			(show_name yes)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Sheet" "1"
-			(at 145 28 0)
-			(hide yes)
-			(show_name yes)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "b6da430c-9580-42a0-a1b2-67fd54f4a371")
-		)
-		(pin "2"
-			(uuid "b22d77a6-1ead-42af-bebe-925fb97937c9")
-		)
-		(pin "3"
-			(uuid "a916e148-40b6-4b7b-8548-910f997e66e5")
-		)
-		(pin "4"
-			(uuid "5cb336b6-d7e4-4f47-9a59-897ce875863a")
-		)
-		(pin "5"
-			(uuid "7be6024b-c351-4bb3-8fa3-fa9693abf712")
-		)
-		(instances
-			(project "red-light-panel"
-				(path "/42616fd0-e647-494b-aa56-d94ba4c08af5/f5e52836-6f85-40ef-9140-3b11a74572f8"
-					(reference "J1")
 					(unit 1)
 				)
 			)
@@ -6120,7 +3953,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "f6848768-3edc-4244-a17a-a1c17d903a0c")
+		(uuid "06ca48f2-3cb3-4c17-8021-44c19e190c86")
 		(property "Reference" "BT2"
 			(at 45 34 0)
 			(show_name no)
@@ -6218,15 +4051,1779 @@
 			)
 		)
 		(pin "1"
-			(uuid "9983c631-3567-4c15-870f-18acc53f8d13")
+			(uuid "40e6ea36-d108-4185-b354-62df8e685998")
 		)
 		(pin "2"
-			(uuid "1036c85c-be23-49d5-a385-80ce94acd82a")
+			(uuid "1e5dcc77-b88e-4a3d-893d-6251001fe01c")
 		)
 		(instances
 			(project "red-light-panel"
 				(path "/42616fd0-e647-494b-aa56-d94ba4c08af5/f5e52836-6f85-40ef-9140-3b11a74572f8"
 					(reference "BT2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "red-light-panel:VBAT")
+		(at 134.92 25.08 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "17dbafd4-ea1e-45b7-ae19-1bd5556986fa")
+		(property "Reference" "#PWR-J1-5"
+			(at 136.92 23.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "VBAT"
+			(at 136.92 25.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 134.92 25.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 134.92 25.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 134.92 25.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "8c268e20-77ee-4b04-8bed-7bae60abdf48")
+		)
+		(instances
+			(project "red-light-panel"
+				(path "/42616fd0-e647-494b-aa56-d94ba4c08af5/f5e52836-6f85-40ef-9140-3b11a74572f8"
+					(reference "#PWR-J1-5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 110 90 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "1c337bf0-674a-479f-ad82-0608bd5a218f")
+		(property "Reference" "R90"
+			(at 115 84 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "100k"
+			(at 115 86 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 115 88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 115 90 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 110 90 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RC0603FR-07100KL"
+			(at 115 92 0)
+			(hide yes)
+			(show_name yes)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Manufacturer" "Yageo"
+			(at 115 94 0)
+			(hide yes)
+			(show_name yes)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "DigiKey_PN" "311-100KHRCT-ND"
+			(at 115 96 0)
+			(hide yes)
+			(show_name yes)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Sheet" "1"
+			(at 115 98 0)
+			(hide yes)
+			(show_name yes)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "d68ee973-e6eb-44bf-a68d-3aa3ede22690")
+		)
+		(pin "2"
+			(uuid "84bef4d4-db4f-4ab5-b9f4-bb190a4286ca")
+		)
+		(instances
+			(project "red-light-panel"
+				(path "/42616fd0-e647-494b-aa56-d94ba4c08af5/f5e52836-6f85-40ef-9140-3b11a74572f8"
+					(reference "R90")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Diode:SMAJ24CA")
+		(at 90 110 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "1cd9aa7e-0425-4b93-8b53-8aab8075a4bf")
+		(property "Reference" "D1"
+			(at 95 104 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "SMAJ24CA"
+			(at 95 106 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SMA"
+			(at 95 108 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.littelfuse.com/media?resourcetype=datasheets&itemid=75e32973-b177-4ee3-a0ff-cedaf1abdb93&filename=smaj-datasheet"
+			(at 95 110 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 90 110 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "SMAJ24CA"
+			(at 95 112 0)
+			(hide yes)
+			(show_name yes)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Manufacturer" "Littelfuse"
+			(at 95 114 0)
+			(hide yes)
+			(show_name yes)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "DigiKey_PN" "F5351CT-ND"
+			(at 95 116 0)
+			(hide yes)
+			(show_name yes)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Sheet" "1"
+			(at 95 118 0)
+			(hide yes)
+			(show_name yes)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "f7667904-553e-4c11-a171-ebeea93ad800")
+		)
+		(pin "2"
+			(uuid "0b4f9cb8-6702-4624-8fcb-4e91f960110f")
+		)
+		(instances
+			(project "red-light-panel"
+				(path "/42616fd0-e647-494b-aa56-d94ba4c08af5/f5e52836-6f85-40ef-9140-3b11a74572f8"
+					(reference "D1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x02")
+		(at 20 90 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "1df489c4-ce6b-463a-883f-7b40e9a6622f")
+		(property "Reference" "J2"
+			(at 25 84 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "Molex 43045-0200"
+			(at 25 86 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "Connector_Molex:Molex_Micro-Fit_3.0_43045-0200_2x01_P3.00mm_Horizontal"
+			(at 25 88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.molex.com/pdm_docs/sd/430450200_sd.pdf"
+			(at 25 90 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 20 90 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "43045-0200"
+			(at 25 92 0)
+			(hide yes)
+			(show_name yes)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Manufacturer" "Molex"
+			(at 25 94 0)
+			(hide yes)
+			(show_name yes)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "DigiKey_PN" "WM1857-ND"
+			(at 25 96 0)
+			(hide yes)
+			(show_name yes)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Sheet" "1"
+			(at 25 98 0)
+			(hide yes)
+			(show_name yes)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "b8fab36d-d912-45c1-ab19-4863c31157e1")
+		)
+		(pin "2"
+			(uuid "e2c1d97e-4974-4506-a89c-6c40cc8642a5")
+		)
+		(instances
+			(project "red-light-panel"
+				(path "/42616fd0-e647-494b-aa56-d94ba4c08af5/f5e52836-6f85-40ef-9140-3b11a74572f8"
+					(reference "J2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "red-light-panel:VBAT")
+		(at 92.54 84.92 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "21ebc0d4-6f5e-4434-8ca4-feab5c83e5a7")
+		(property "Reference" "#PWR-Q3-3"
+			(at 94.54 82.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "VBAT"
+			(at 94.54 84.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 92.54 84.92 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 92.54 84.92 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 92.54 84.92 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "a16fd669-0a72-41f7-b322-d4ead825b1c0")
+		)
+		(instances
+			(project "red-light-panel"
+				(path "/42616fd0-e647-494b-aa56-d94ba4c08af5/f5e52836-6f85-40ef-9140-3b11a74572f8"
+					(reference "#PWR-Q3-3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "red-light-panel:VBAT")
+		(at 100 14.92 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "24a9327f-3f6e-43b8-83b1-0533bb3563ab")
+		(property "Reference" "#PWR-BT7-1"
+			(at 102 12.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "VBAT"
+			(at 102 14.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 100 14.92 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 100 14.92 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 100 14.92 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "e4998a23-6438-4ce0-91a7-1ac328fd68e6")
+		)
+		(instances
+			(project "red-light-panel"
+				(path "/42616fd0-e647-494b-aa56-d94ba4c08af5/f5e52836-6f85-40ef-9140-3b11a74572f8"
+					(reference "#PWR-BT7-1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_FET:CSD18540Q5B")
+		(at 200 45 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "30ba670d-2e02-4243-91cb-5e2a56f57205")
+		(property "Reference" "Q2"
+			(at 205 39 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "CSD18540Q5B"
+			(at 205 41 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:TDSON-8-1"
+			(at 205 43 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Datasheet" "http://www.ti.com/lit/gpn/csd18540q5b"
+			(at 205 45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 200 45 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CSD18540Q5B"
+			(at 205 47 0)
+			(hide yes)
+			(show_name yes)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Manufacturer" "Texas Instruments"
+			(at 205 49 0)
+			(hide yes)
+			(show_name yes)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "DigiKey_PN" "296-37312-1-ND"
+			(at 205 51 0)
+			(hide yes)
+			(show_name yes)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Sheet" "1"
+			(at 205 53 0)
+			(hide yes)
+			(show_name yes)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "e8153095-6f5a-4b61-8591-da15944120c4")
+		)
+		(pin "2"
+			(uuid "6d6a7550-2cd4-4e1c-b557-34542c6d12a6")
+		)
+		(pin "3"
+			(uuid "e684e1a5-e46b-4725-963e-66c78ce5585b")
+		)
+		(pin "4"
+			(uuid "1cfa4867-96ac-4243-9cae-5af37bfbe911")
+		)
+		(pin "5"
+			(uuid "8eb0f85a-53b9-4417-9515-752cb34d4779")
+		)
+		(instances
+			(project "red-light-panel"
+				(path "/42616fd0-e647-494b-aa56-d94ba4c08af5/f5e52836-6f85-40ef-9140-3b11a74572f8"
+					(reference "Q2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Battery_Cell")
+		(at 60 20 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "35d13711-f5dd-43fd-8009-a739f264a1e8")
+		(property "Reference" "BT3"
+			(at 65 14 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "INR18650-30Q"
+			(at 65 16 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "Battery:BatteryHolder_Keystone_1042_1x18650"
+			(at 65 18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.dnkpower.com/wp-content/uploads/2018/10/INR18650-30Q.pdf"
+			(at 65 20 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 60 20 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "Samsung INR18650-30Q"
+			(at 65 22 0)
+			(hide yes)
+			(show_name yes)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Manufacturer" "Samsung SDI"
+			(at 65 24 0)
+			(hide yes)
+			(show_name yes)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "DigiKey_PN" "INR18650-30Q-B-ND"
+			(at 65 26 0)
+			(hide yes)
+			(show_name yes)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Sheet" "1"
+			(at 65 28 0)
+			(hide yes)
+			(show_name yes)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "0bb5c301-ac62-49fc-9738-049b67e8123e")
+		)
+		(pin "2"
+			(uuid "cc83ddb0-73f9-48d2-851c-bb3e341f2187")
+		)
+		(instances
+			(project "red-light-panel"
+				(path "/42616fd0-e647-494b-aa56-d94ba4c08af5/f5e52836-6f85-40ef-9140-3b11a74572f8"
+					(reference "BT3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "red-light-panel:VBAT")
+		(at 202.54 14.92 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "387657db-66c9-4f7c-b417-93fe75b01d40")
+		(property "Reference" "#PWR-Q1-5"
+			(at 204.54 12.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "VBAT"
+			(at 204.54 14.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 202.54 14.92 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 202.54 14.92 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 202.54 14.92 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "fde40b07-a32f-4ee1-80b2-13b9021a8fa4")
+		)
+		(instances
+			(project "red-light-panel"
+				(path "/42616fd0-e647-494b-aa56-d94ba4c08af5/f5e52836-6f85-40ef-9140-3b11a74572f8"
+					(reference "#PWR-Q1-5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "red-light-panel:VBAT")
+		(at 100 34.92 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "3baac243-c0ce-4345-8ba4-d74dba35d23e")
+		(property "Reference" "#PWR-BT8-1"
+			(at 102 32.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "VBAT"
+			(at 102 34.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 100 34.92 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 100 34.92 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 100 34.92 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "f084fe39-588f-49e4-a11a-852229b3a2b4")
+		)
+		(instances
+			(project "red-light-panel"
+				(path "/42616fd0-e647-494b-aa56-d94ba4c08af5/f5e52836-6f85-40ef-9140-3b11a74572f8"
+					(reference "#PWR-BT8-1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 260 90 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "4709ca89-bc8e-4215-865d-39db6525bca5")
+		(property "Reference" "#FLG1"
+			(at 263 87 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 263 89 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 260 90 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 260 90 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 260 90 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "e3194fe0-e321-4563-ba76-cdbfe4b5adf1")
+		)
+		(instances
+			(project "red-light-panel"
+				(path "/42616fd0-e647-494b-aa56-d94ba4c08af5/f5e52836-6f85-40ef-9140-3b11a74572f8"
+					(reference "#FLG1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 185 100 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "4d904cb1-2fd5-4b19-85af-a1df59e02237")
+		(property "Reference" "C91"
+			(at 190 94 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "0.1uF (added, flagged)"
+			(at 190 96 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 190 98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 190 100 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 185 100 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" ""
+			(at 190 102 0)
+			(hide yes)
+			(show_name yes)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Manufacturer" ""
+			(at 190 104 0)
+			(hide yes)
+			(show_name yes)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "DigiKey_PN" ""
+			(at 190 106 0)
+			(hide yes)
+			(show_name yes)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Sheet" "1"
+			(at 190 108 0)
+			(hide yes)
+			(show_name yes)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "0f94a0b4-9305-4e41-9438-df86978b063c")
+		)
+		(pin "2"
+			(uuid "a23da924-a2cc-4036-8043-03e58cd4ab25")
+		)
+		(instances
+			(project "red-light-panel"
+				(path "/42616fd0-e647-494b-aa56-d94ba4c08af5/f5e52836-6f85-40ef-9140-3b11a74572f8"
+					(reference "C91")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Battery_Cell")
+		(at 100 20 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "5da419ef-3e1e-46dd-b826-4da5fc11310f")
+		(property "Reference" "BT7"
+			(at 105 14 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "INR18650-30Q"
+			(at 105 16 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "Battery:BatteryHolder_Keystone_1042_1x18650"
+			(at 105 18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.dnkpower.com/wp-content/uploads/2018/10/INR18650-30Q.pdf"
+			(at 105 20 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 100 20 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "Samsung INR18650-30Q"
+			(at 105 22 0)
+			(hide yes)
+			(show_name yes)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Manufacturer" "Samsung SDI"
+			(at 105 24 0)
+			(hide yes)
+			(show_name yes)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "DigiKey_PN" "INR18650-30Q-B-ND"
+			(at 105 26 0)
+			(hide yes)
+			(show_name yes)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Sheet" "1"
+			(at 105 28 0)
+			(hide yes)
+			(show_name yes)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "c3372b60-8855-467b-9fbb-a1bd749c885f")
+		)
+		(pin "2"
+			(uuid "72b851a3-6a8d-47df-bcac-0d65409ffeb5")
+		)
+		(instances
+			(project "red-light-panel"
+				(path "/42616fd0-e647-494b-aa56-d94ba4c08af5/f5e52836-6f85-40ef-9140-3b11a74572f8"
+					(reference "BT7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_FET:AO3401A")
+		(at 90 90 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "626400c7-cbf9-4d5e-83d5-e1eaeaebfa5b")
+		(property "Reference" "Q3"
+			(at 95 84 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "AO3401A"
+			(at 95 86 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 95 88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Datasheet" "http://www.aosmd.com/pdfs/datasheet/AO3401A.pdf"
+			(at 95 90 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 90 90 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "AO3401A"
+			(at 95 92 0)
+			(hide yes)
+			(show_name yes)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Manufacturer" "Alpha & Omega Semiconductor"
+			(at 95 94 0)
+			(hide yes)
+			(show_name yes)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "DigiKey_PN" "AO3401A-DICT-ND"
+			(at 95 96 0)
+			(hide yes)
+			(show_name yes)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Sheet" "1"
+			(at 95 98 0)
+			(hide yes)
+			(show_name yes)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "6a05ffb0-bb07-4514-98af-a80627132e61")
+		)
+		(pin "2"
+			(uuid "f60aa2df-bf91-411c-ae3c-c7db3c975518")
+		)
+		(pin "3"
+			(uuid "41931a22-f146-4560-9950-34e20f48cd15")
+		)
+		(instances
+			(project "red-light-panel"
+				(path "/42616fd0-e647-494b-aa56-d94ba4c08af5/f5e52836-6f85-40ef-9140-3b11a74572f8"
+					(reference "Q3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 185 103.81 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "66863887-3fd4-4808-9397-a0a284b6ed52")
+		(property "Reference" "#PWR-C91-2"
+			(at 187 101.81 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 187 103.81 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 185 103.81 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 185 103.81 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 185 103.81 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "02a3223f-ffc2-4cc7-aafc-48e3b613c9c9")
+		)
+		(instances
+			(project "red-light-panel"
+				(path "/42616fd0-e647-494b-aa56-d94ba4c08af5/f5e52836-6f85-40ef-9140-3b11a74572f8"
+					(reference "#PWR-C91-2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x05")
+		(at 140 20 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "7f9db533-0380-4202-b6b5-22b3e4b8f902")
+		(property "Reference" "J1"
+			(at 145 14 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "JST B5B-XH-A"
+			(at 145 16 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "Connector_JST:JST_XH_B5B-XH-A_1x05_P2.50mm_Vertical"
+			(at 145 18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.jst-mfg.com/product/pdf/eng/eXH.pdf"
+			(at 145 20 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 140 20 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "B5B-XH-A"
+			(at 145 22 0)
+			(hide yes)
+			(show_name yes)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Manufacturer" "JST"
+			(at 145 24 0)
+			(hide yes)
+			(show_name yes)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "DigiKey_PN" "455-1719-ND"
+			(at 145 26 0)
+			(hide yes)
+			(show_name yes)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Sheet" "1"
+			(at 145 28 0)
+			(hide yes)
+			(show_name yes)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "32c4bb10-c1f9-4ed8-a6ff-0292273e0c89")
+		)
+		(pin "2"
+			(uuid "8711f7e2-6be2-4e2d-a874-40f957dbabc1")
+		)
+		(pin "3"
+			(uuid "10b99af4-c4a7-485b-830c-acd3fc9db512")
+		)
+		(pin "4"
+			(uuid "765521a5-2977-4677-ad79-e49f6646db93")
+		)
+		(pin "5"
+			(uuid "2bbe621d-3d2a-4148-8e12-a84b88283204")
+		)
+		(instances
+			(project "red-light-panel"
+				(path "/42616fd0-e647-494b-aa56-d94ba4c08af5/f5e52836-6f85-40ef-9140-3b11a74572f8"
+					(reference "J1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Battery_Cell")
+		(at 60 40 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "85ddfcf0-a9a1-4170-94f4-ef530dab7034")
+		(property "Reference" "BT4"
+			(at 65 34 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "INR18650-30Q"
+			(at 65 36 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "Battery:BatteryHolder_Keystone_1042_1x18650"
+			(at 65 38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.dnkpower.com/wp-content/uploads/2018/10/INR18650-30Q.pdf"
+			(at 65 40 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 60 40 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "Samsung INR18650-30Q"
+			(at 65 42 0)
+			(hide yes)
+			(show_name yes)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Manufacturer" "Samsung SDI"
+			(at 65 44 0)
+			(hide yes)
+			(show_name yes)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "DigiKey_PN" "INR18650-30Q-B-ND"
+			(at 65 46 0)
+			(hide yes)
+			(show_name yes)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Sheet" "1"
+			(at 65 48 0)
+			(hide yes)
+			(show_name yes)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "98cc5ce7-aacf-4434-92c2-2f6929eb36c1")
+		)
+		(pin "2"
+			(uuid "ad8f1334-3bd0-467a-b25f-0028b9545cfc")
+		)
+		(instances
+			(project "red-light-panel"
+				(path "/42616fd0-e647-494b-aa56-d94ba4c08af5/f5e52836-6f85-40ef-9140-3b11a74572f8"
+					(reference "BT4")
 					(unit 1)
 				)
 			)
@@ -6242,7 +5839,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "f6e87cfd-f480-47cd-a379-db0185daf64a")
+		(uuid "95458923-bd19-4da3-a6d6-33263739be44")
 		(property "Reference" "BT1"
 			(at 45 14 0)
 			(show_name no)
@@ -6340,10 +5937,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "16afc567-fdfd-4baf-9175-f30f2012de55")
+			(uuid "28c3e3db-6c77-4df6-89e2-013836460f4f")
 		)
 		(pin "2"
-			(uuid "80b8f808-8712-4d19-855c-1a6372fac8fb")
+			(uuid "e69955fe-7e23-4ae7-8b78-ab9f07c84f56")
 		)
 		(instances
 			(project "red-light-panel"
@@ -6355,18 +5952,18 @@
 		)
 	)
 	(symbol
-		(lib_id "power:PWR_FLAG")
-		(at 260 90 0)
+		(lib_id "Device:Battery_Cell")
+		(at 80 20 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
+		(in_bom yes)
+		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "feb0effb-ca37-44ea-b056-b4cd16f465f8")
-		(property "Reference" "#FLG1"
-			(at 263 87 0)
+		(uuid "968cb245-f363-4d8f-a5fb-26577d04b87c")
+		(property "Reference" "BT5"
+			(at 85 14 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6375,8 +5972,132 @@
 				)
 			)
 		)
-		(property "Value" "PWR_FLAG"
-			(at 263 89 0)
+		(property "Value" "INR18650-30Q"
+			(at 85 16 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "Battery:BatteryHolder_Keystone_1042_1x18650"
+			(at 85 18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.dnkpower.com/wp-content/uploads/2018/10/INR18650-30Q.pdf"
+			(at 85 20 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 80 20 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "Samsung INR18650-30Q"
+			(at 85 22 0)
+			(hide yes)
+			(show_name yes)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Manufacturer" "Samsung SDI"
+			(at 85 24 0)
+			(hide yes)
+			(show_name yes)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "DigiKey_PN" "INR18650-30Q-B-ND"
+			(at 85 26 0)
+			(hide yes)
+			(show_name yes)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Sheet" "1"
+			(at 85 28 0)
+			(hide yes)
+			(show_name yes)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "f6df16f5-cb06-4631-ab4d-c602639e2a1a")
+		)
+		(pin "2"
+			(uuid "16d8caa3-6488-4792-bf11-c08ebbdeca89")
+		)
+		(instances
+			(project "red-light-panel"
+				(path "/42616fd0-e647-494b-aa56-d94ba4c08af5/f5e52836-6f85-40ef-9140-3b11a74572f8"
+					(reference "BT5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 152.7 75.24 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "a45b11c6-e1b5-4aec-838a-1ddea7f8042b")
+		(property "Reference" "#PWR-U1-19"
+			(at 154.7 73.24 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 154.7 75.24 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6386,7 +6107,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 260 90 0)
+			(at 152.7 75.24 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6396,7 +6117,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 260 90 0)
+			(at 152.7 75.24 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6406,7 +6127,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 260 90 0)
+			(at 152.7 75.24 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6416,12 +6137,1632 @@
 			)
 		)
 		(pin "1"
-			(uuid "faab4e78-9fac-466a-94d4-a75f0b38144a")
+			(uuid "6f467fd2-e62f-4a92-bb17-43fd30d95e1f")
 		)
 		(instances
 			(project "red-light-panel"
 				(path "/42616fd0-e647-494b-aa56-d94ba4c08af5/f5e52836-6f85-40ef-9140-3b11a74572f8"
-					(reference "#FLG1")
+					(reference "#PWR-U1-19")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 170 103.81 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "a5ab5c8f-6435-4151-92f7-f0f003cd721e")
+		(property "Reference" "#PWR-C90-2"
+			(at 172 101.81 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 172 103.81 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 170 103.81 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 170 103.81 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 170 103.81 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "ff62df4c-bc4f-4184-ab43-f7238951028a")
+		)
+		(instances
+			(project "red-light-panel"
+				(path "/42616fd0-e647-494b-aa56-d94ba4c08af5/f5e52836-6f85-40ef-9140-3b11a74572f8"
+					(reference "#PWR-C90-2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "red-light-panel:VBAT")
+		(at 110 93.81 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "a91f28cd-fab9-47bc-9ca7-a44b4d6da966")
+		(property "Reference" "#PWR-R90-2"
+			(at 112 91.81 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "VBAT"
+			(at 112 93.81 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 110 93.81 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 110 93.81 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 110 93.81 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "9be0fae0-c3de-4a54-a48d-556b0edc0504")
+		)
+		(instances
+			(project "red-light-panel"
+				(path "/42616fd0-e647-494b-aa56-d94ba4c08af5/f5e52836-6f85-40ef-9140-3b11a74572f8"
+					(reference "#PWR-R90-2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 140 80.32 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "ac744a83-d564-400e-b86d-390aa81b73b4")
+		(property "Reference" "#PWR-U1-3"
+			(at 142 78.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 142 80.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 140 80.32 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 140 80.32 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 140 80.32 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "34677b82-2b78-49cd-a891-1b62df434531")
+		)
+		(instances
+			(project "red-light-panel"
+				(path "/42616fd0-e647-494b-aa56-d94ba4c08af5/f5e52836-6f85-40ef-9140-3b11a74572f8"
+					(reference "#PWR-U1-3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 140 100 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "acf2658f-bd19-4dc7-9208-93a892e5aedf")
+		(property "Reference" "R1"
+			(at 145 94 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "0.01R 1%"
+			(at 145 96 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_Shunt_Vishay_WSK2512_6332Metric_T2.21mm"
+			(at 145 98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.vishay.com/docs/30112/wsl.pdf"
+			(at 145 100 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 140 100 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "WSL2512R0100FEA"
+			(at 145 102 0)
+			(hide yes)
+			(show_name yes)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Manufacturer" "Vishay Dale"
+			(at 145 104 0)
+			(hide yes)
+			(show_name yes)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "DigiKey_PN" "541-2455-1-ND"
+			(at 145 106 0)
+			(hide yes)
+			(show_name yes)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Sheet" "1"
+			(at 145 108 0)
+			(hide yes)
+			(show_name yes)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "32953681-97b0-4a8a-8fe9-de65d245c4c0")
+		)
+		(pin "2"
+			(uuid "4f198cd8-dc1f-4665-a789-4db5789ad6b0")
+		)
+		(instances
+			(project "red-light-panel"
+				(path "/42616fd0-e647-494b-aa56-d94ba4c08af5/f5e52836-6f85-40ef-9140-3b11a74572f8"
+					(reference "R1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "red-light-panel:VBAT")
+		(at 152.7 54.92 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "b23520f1-520b-4fa2-80ae-3eac449dbae0")
+		(property "Reference" "#PWR-U1-12"
+			(at 154.7 52.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "VBAT"
+			(at 154.7 54.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 152.7 54.92 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 152.7 54.92 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 152.7 54.92 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "c6274b41-bc7d-4da8-94db-ef8c57371afb")
+		)
+		(instances
+			(project "red-light-panel"
+				(path "/42616fd0-e647-494b-aa56-d94ba4c08af5/f5e52836-6f85-40ef-9140-3b11a74572f8"
+					(reference "#PWR-U1-12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 170 100 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "b8a4530e-65f8-46c0-8b1b-2df329498217")
+		(property "Reference" "C90"
+			(at 175 94 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "1uF (added, flagged)"
+			(at 175 96 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 175 98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 175 100 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 170 100 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" ""
+			(at 175 102 0)
+			(hide yes)
+			(show_name yes)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Manufacturer" ""
+			(at 175 104 0)
+			(hide yes)
+			(show_name yes)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "DigiKey_PN" ""
+			(at 175 106 0)
+			(hide yes)
+			(show_name yes)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Sheet" "1"
+			(at 175 108 0)
+			(hide yes)
+			(show_name yes)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "1c11388a-23eb-4091-84a2-bd53e35707d6")
+		)
+		(pin "2"
+			(uuid "de551b59-8115-48ab-96b4-15bb3557930e")
+		)
+		(instances
+			(project "red-light-panel"
+				(path "/42616fd0-e647-494b-aa56-d94ba4c08af5/f5e52836-6f85-40ef-9140-3b11a74572f8"
+					(reference "C90")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 140 103.81 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "ba9e5490-f98c-4798-b814-094bc0fcc2fe")
+		(property "Reference" "#PWR-R1-2"
+			(at 142 101.81 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 142 103.81 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 140 103.81 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 140 103.81 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 140 103.81 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "5eb982f6-46eb-475a-a966-a178e30836bb")
+		)
+		(instances
+			(project "red-light-panel"
+				(path "/42616fd0-e647-494b-aa56-d94ba4c08af5/f5e52836-6f85-40ef-9140-3b11a74572f8"
+					(reference "#PWR-R1-2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "red-light-panel:VBAT")
+		(at 152.7 49.84 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "c0cbc32b-6a97-4f11-8914-39ff69fe8a7c")
+		(property "Reference" "#PWR-U1-10"
+			(at 154.7 47.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "VBAT"
+			(at 154.7 49.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 152.7 49.84 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 152.7 49.84 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 152.7 49.84 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "15ee12df-90b8-420a-8bac-3179a5ad349a")
+		)
+		(instances
+			(project "red-light-panel"
+				(path "/42616fd0-e647-494b-aa56-d94ba4c08af5/f5e52836-6f85-40ef-9140-3b11a74572f8"
+					(reference "#PWR-U1-10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "red-light-panel:VBAT_PROT")
+		(at 202.54 39.92 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "ce076ed3-b742-4043-bce0-e8b2537407b3")
+		(property "Reference" "#PWR-Q2-5"
+			(at 204.54 37.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "VBAT_PROT"
+			(at 204.54 39.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 202.54 39.92 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 202.54 39.92 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 202.54 39.92 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "7e6a9128-5ffd-48c1-80dd-e4aa7e72ea86")
+		)
+		(instances
+			(project "red-light-panel"
+				(path "/42616fd0-e647-494b-aa56-d94ba4c08af5/f5e52836-6f85-40ef-9140-3b11a74572f8"
+					(reference "#PWR-Q2-5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Battery_Cell")
+		(at 80 40 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "d6e1eca3-7844-411f-8569-432ce8f906fc")
+		(property "Reference" "BT6"
+			(at 85 34 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "INR18650-30Q"
+			(at 85 36 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "Battery:BatteryHolder_Keystone_1042_1x18650"
+			(at 85 38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.dnkpower.com/wp-content/uploads/2018/10/INR18650-30Q.pdf"
+			(at 85 40 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 80 40 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "Samsung INR18650-30Q"
+			(at 85 42 0)
+			(hide yes)
+			(show_name yes)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Manufacturer" "Samsung SDI"
+			(at 85 44 0)
+			(hide yes)
+			(show_name yes)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "DigiKey_PN" "INR18650-30Q-B-ND"
+			(at 85 46 0)
+			(hide yes)
+			(show_name yes)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Sheet" "1"
+			(at 85 48 0)
+			(hide yes)
+			(show_name yes)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "ccbfddbf-c810-480f-a98d-e2e097bd04a5")
+		)
+		(pin "2"
+			(uuid "fe9403fe-ffdf-4b51-bebf-56c2f21a1802")
+		)
+		(instances
+			(project "red-light-panel"
+				(path "/42616fd0-e647-494b-aa56-d94ba4c08af5/f5e52836-6f85-40ef-9140-3b11a74572f8"
+					(reference "BT6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Battery_Management:BQ76920PW")
+		(at 140 60 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "dd06bfc2-ba91-4f8d-b17d-c4b7860b90f8")
+		(property "Reference" "U1"
+			(at 145 54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "BQ76920PW"
+			(at 145 56 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm"
+			(at 145 58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/bq76920.pdf"
+			(at 145 60 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 140 60 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "BQ7692000PWR"
+			(at 145 62 0)
+			(hide yes)
+			(show_name yes)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Manufacturer" "Texas Instruments"
+			(at 145 64 0)
+			(hide yes)
+			(show_name yes)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "DigiKey_PN" "296-37299-1-ND"
+			(at 145 66 0)
+			(hide yes)
+			(show_name yes)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Sheet" "1"
+			(at 145 68 0)
+			(hide yes)
+			(show_name yes)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(pin "6"
+			(uuid "016050fb-5828-474e-ade2-0751c420d179")
+		)
+		(pin "7"
+			(uuid "cfa7c058-6e52-4ba5-9773-0f31610e98b1")
+		)
+		(pin "8"
+			(uuid "726aa541-2d8f-423f-83b4-4c82b8eaf657")
+		)
+		(pin "9"
+			(uuid "514de4df-747f-4c51-8c20-0f4161c903e8")
+		)
+		(pin "10"
+			(uuid "d055fc9c-961a-4958-be2c-e00d52cae072")
+		)
+		(pin "11"
+			(uuid "6982f7c3-807f-49ef-9b0e-a2295cb00904")
+		)
+		(pin "12"
+			(uuid "c7d765a2-1978-4eb4-940e-2d4e68db7e54")
+		)
+		(pin "13"
+			(uuid "65b28799-6af0-4377-a88a-62913c81358c")
+		)
+		(pin "14"
+			(uuid "0a0e68fd-e2d4-4141-b4d0-11156e041626")
+		)
+		(pin "15"
+			(uuid "83fc4a66-023d-4311-9b7f-8f353742405d")
+		)
+		(pin "16"
+			(uuid "30a6ea08-d8c1-41c4-b1c7-8f65cdd8378e")
+		)
+		(pin "17"
+			(uuid "072f61e6-1d15-4348-9b95-11ae31ae2c82")
+		)
+		(pin "18"
+			(uuid "4a79f716-9dda-4d03-ac70-7cbec8f90881")
+		)
+		(pin "19"
+			(uuid "54d6a708-68ae-4c1e-803e-51e14106f0e3")
+		)
+		(pin "20"
+			(uuid "2db4cac2-5e1d-49b6-aac0-1582ac59fe0f")
+		)
+		(pin "1"
+			(uuid "eda2787b-9168-458b-be97-81a1773bbaa9")
+		)
+		(pin "2"
+			(uuid "46430c38-0841-4284-b1df-c384d6f1dab2")
+		)
+		(pin "3"
+			(uuid "0c51166c-9955-452d-8fdc-5bac49973a1e")
+		)
+		(pin "4"
+			(uuid "2e0f45be-36ae-4a6f-98df-e42f2f099719")
+		)
+		(pin "5"
+			(uuid "cb44fc45-8402-43bc-8400-bb1ac2a88cba")
+		)
+		(instances
+			(project "red-light-panel"
+				(path "/42616fd0-e647-494b-aa56-d94ba4c08af5/f5e52836-6f85-40ef-9140-3b11a74572f8"
+					(reference "U1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "red-light-panel:VBAT")
+		(at 152.7 57.46 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "e079c8b4-0edd-47dc-82f9-9da91a9da8c7")
+		(property "Reference" "#PWR-U1-13"
+			(at 154.7 55.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "VBAT"
+			(at 154.7 57.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 152.7 57.46 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 152.7 57.46 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 152.7 57.46 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "d7c62fb0-bac4-4e57-b90b-2fc94d24634c")
+		)
+		(instances
+			(project "red-light-panel"
+				(path "/42616fd0-e647-494b-aa56-d94ba4c08af5/f5e52836-6f85-40ef-9140-3b11a74572f8"
+					(reference "#PWR-U1-13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Fuse")
+		(at 60 90 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "e60f3c9b-89a3-40a2-81a7-bc0c74ce81de")
+		(property "Reference" "F1"
+			(at 65 84 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "0.25A resettable"
+			(at 65 86 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "Fuse:Fuse_BelFuse_0ZRE0025FF_L9.6mm_W3.8mm"
+			(at 65 88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.belfuse.com/resources/datasheets/circuitprotection/ds-cp-0zre-series.pdf"
+			(at 65 90 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 60 90 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "0ZRE0025FF (corrected from placeholder MICROSMD250F/16-2 -- FLAG FOR REVIEW)"
+			(at 65 92 0)
+			(hide yes)
+			(show_name yes)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Manufacturer" "Bel Fuse"
+			(at 65 94 0)
+			(hide yes)
+			(show_name yes)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "DigiKey_PN" "507-1677-1-ND"
+			(at 65 96 0)
+			(hide yes)
+			(show_name yes)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Sheet" "1"
+			(at 65 98 0)
+			(hide yes)
+			(show_name yes)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "dc480dd9-9a16-4a43-a62c-17aaac5bab04")
+		)
+		(pin "2"
+			(uuid "2ba26f6f-c7ce-4790-af24-11aa6a3df8a4")
+		)
+		(instances
+			(project "red-light-panel"
+				(path "/42616fd0-e647-494b-aa56-d94ba4c08af5/f5e52836-6f85-40ef-9140-3b11a74572f8"
+					(reference "F1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "red-light-panel:VBAT")
+		(at 140 39.68 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "f0e2170d-2c0e-4a80-971e-71267541bdc0")
+		(property "Reference" "#PWR-U1-9"
+			(at 142 37.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "VBAT"
+			(at 142 39.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 140 39.68 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 140 39.68 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 140 39.68 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "7173f5e7-8490-412f-adc2-47eef5bc5dda")
+		)
+		(instances
+			(project "red-light-panel"
+				(path "/42616fd0-e647-494b-aa56-d94ba4c08af5/f5e52836-6f85-40ef-9140-3b11a74572f8"
+					(reference "#PWR-U1-9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 93.81 110 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "f2dcd53c-437d-4691-80dd-ada29cfc0bf0")
+		(property "Reference" "#PWR-D1-2"
+			(at 95.81 108 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 95.81 110 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 93.81 110 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 93.81 110 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 93.81 110 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "cd30b026-d8f7-4029-b79a-4ea40162720f")
+		)
+		(instances
+			(project "red-light-panel"
+				(path "/42616fd0-e647-494b-aa56-d94ba4c08af5/f5e52836-6f85-40ef-9140-3b11a74572f8"
+					(reference "#PWR-D1-2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "red-light-panel:VBAT")
+		(at 86.19 110 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "f304fc7a-511a-4d05-9bc5-d9ba388dce6b")
+		(property "Reference" "#PWR-D1-1"
+			(at 88.19 108 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "VBAT"
+			(at 88.19 110 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 86.19 110 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 86.19 110 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 86.19 110 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "1556aacc-eec2-461b-863a-0af1bbfc29d7")
+		)
+		(instances
+			(project "red-light-panel"
+				(path "/42616fd0-e647-494b-aa56-d94ba4c08af5/f5e52836-6f85-40ef-9140-3b11a74572f8"
+					(reference "#PWR-D1-1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_FET:CSD18540Q5B")
+		(at 200 20 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "f7f8df5e-446b-4933-9c7e-50f5dc86211f")
+		(property "Reference" "Q1"
+			(at 205 14 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "CSD18540Q5B"
+			(at 205 16 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:TDSON-8-1"
+			(at 205 18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Datasheet" "http://www.ti.com/lit/gpn/csd18540q5b"
+			(at 205 20 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 200 20 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CSD18540Q5B"
+			(at 205 22 0)
+			(hide yes)
+			(show_name yes)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Manufacturer" "Texas Instruments"
+			(at 205 24 0)
+			(hide yes)
+			(show_name yes)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "DigiKey_PN" "296-37312-1-ND"
+			(at 205 26 0)
+			(hide yes)
+			(show_name yes)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Sheet" "1"
+			(at 205 28 0)
+			(hide yes)
+			(show_name yes)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "b806c319-229a-4bc3-bb0a-0549ee5e2939")
+		)
+		(pin "2"
+			(uuid "52a9dc48-2407-45eb-9836-aa25c6c711fb")
+		)
+		(pin "3"
+			(uuid "0d6a7a91-cd47-4a42-b831-1843f99d1cad")
+		)
+		(pin "4"
+			(uuid "58bac032-811b-449e-aa1b-d23d87127279")
+		)
+		(pin "5"
+			(uuid "957dc90c-cd47-43af-906c-e1e64a4c1226")
+		)
+		(instances
+			(project "red-light-panel"
+				(path "/42616fd0-e647-494b-aa56-d94ba4c08af5/f5e52836-6f85-40ef-9140-3b11a74572f8"
+					(reference "Q1")
 					(unit 1)
 				)
 			)

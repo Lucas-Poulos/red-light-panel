@@ -56,6 +56,26 @@ no chance of a sheet-pin/hierarchical-label name or direction mismatch.
 The root sheet's sheet symbols carry no pins as a result; this is a
 deliberate, documented substitution, not an oversight.
 
+**Power nets use real power symbols, not bare labels.** GND, VBAT,
+VBAT_PROT, 3V3, and USB_VBUS are placed as actual KiCad power symbols
+(`power:GND`, `power:+3V3` with its Value overridden to "3V3",
+`power:VBUS` overridden to "USB_VBUS", and two custom symbols for VBAT/
+VBAT_PROT copied from stock `power:+BATT` into
+`libs/red-light-panel.kicad_sym`) rather than plain `GlobalLabel`s -- the
+idiomatic convention a human designer would use for rails specifically.
+`add_power_symbol()` in `builder.py` places one at every pin on these
+nets, same coincidence-based mechanism as the flying-label technique
+above (confirmed empirically that overriding a stock power symbol's
+Value *does* change its effective net name -- e.g. `power:+3V3` with
+Value "3V3" correctly nets as "3V3", not "+3V3" -- as long as the symbol
+is actually coincident with a real pin; an isolated power symbol
+touching nothing is, unsurprisingly, still just as disconnected as an
+isolated label would be). Every stock/custom power symbol's pin is type
+`power_in`, never `power_out`, so this doesn't change anything about the
+PWR_FLAG requirements below. All other cross-sheet/signal nets
+(I2C_SDA, PWM_A, LED_A+, ...) remain plain `GlobalLabel`s -- a "power
+symbol" wouldn't make semantic sense for a data or PWM signal.
+
 **The pin-position Y-flip.** A pin's world connection point is
 `(symbol.x + pin.local_x, symbol.y - pin.local_y)` -- note the minus sign.
 KiCad's symbol library editor uses a Y-up coordinate system internally,
