@@ -658,13 +658,46 @@
       {
         "filename": "red-light-panel.kicad_sch",
         "name": "red-light-panel",
-        "uuid": "00000000-0000-0000-0000-000000000000"
+        "uuid": "42616fd0-e647-494b-aa56-d94ba4c08af5"
       }
     ],
     "used_designators": "",
     "variants": []
   },
-  "sheets": [],
+  "sheets": [
+    [
+      "42616fd0-e647-494b-aa56-d94ba4c08af5",
+      "red-light-panel"
+    ],
+    [
+      "f5e52836-6f85-40ef-9140-3b11a74572f8",
+      "Battery Pack & Protection"
+    ],
+    [
+      "8929090f-0ddb-42da-9626-22ad57d5d841",
+      "LED Array"
+    ],
+    [
+      "cee25bfc-8f68-4ab8-92f3-a9010c5e56df",
+      "USB-C Charging Input"
+    ],
+    [
+      "806fcdb0-0aa2-4434-ac98-a2737f8a9cdc",
+      "MCU & Control"
+    ],
+    [
+      "30969a0b-99d0-4a3c-a1d1-3b889a5a6cec",
+      "3.3V Logic Rail"
+    ],
+    [
+      "738827e2-f99f-478a-a249-e1a272f6991c",
+      "HMI"
+    ],
+    [
+      "460f0d68-65e1-4485-86c7-154afe531473",
+      "LED Drivers"
+    ]
+  ],
   "text_variables": {},
   "tuning_profiles": {
     "meta": {
