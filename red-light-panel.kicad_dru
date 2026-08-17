@@ -1,0 +1,40 @@
+(version 1)
+
+# Custom design rules -- red-light-panel, 2-layer, 1oz/1oz copper.
+# See docs/pcb_fabrication_rules.md for the full rationale (JLCPCB
+# standard-service capabilities + margin). KiCad auto-loads this file
+# because its name matches the project name; no registration needed.
+#
+# Board-wide minimums (track width, clearance, hole sizes, silk, edge
+# clearance) are set in the project file's design rules
+# (Board Setup > Design Rules > Constraints) -- this file only adds
+# NET-SPECIFIC overrides for traces that need to be wider than the
+# board-wide minimum because they carry real current, not just logic
+# signals. 1oz copper, ~20C rise, generous margin below IPC-2221's
+# external-layer curve (not run right at the edge of what the copper can
+# carry):
+#   1.0mm  (40mil) -> good for several amps continuous
+#   1.5mm  (60mil) -> good for the pack-level ~5-6A worst case
+#
+# Nets that need to be verified against a real current budget once
+# layout begins are flagged in docs/power_budget.md -- these widths are
+# a safe starting point, not a substitute for that calculation.
+
+(rule "Pack-level power (VBAT/VBAT_PROT/GND/USB_VBUS/charger power path)"
+	(condition "A.NetName == 'VBAT' || A.NetName == 'VBAT_PROT' || A.NetName == 'GND' || A.NetName == 'USB_VBUS' || A.NetName == 'PD_PP_OUT'")
+	(constraint (type track_width) (min 1mm) (opt 1.5mm))
+	(constraint (type via_diameter) (min 0.8mm) (opt 1mm))
+	(constraint (type via_drill) (min 0.4mm) (opt 0.4mm))
+)
+
+(rule "LED channel current (~625mA/string, up to ~5A/channel)"
+	(condition "A.NetName == 'LED_A+' || A.NetName == 'LED_A-' || A.NetName == 'LED_B+' || A.NetName == 'LED_B-'")
+	(constraint (type track_width) (min 1mm) (opt 1.5mm))
+	(constraint (type via_diameter) (min 0.8mm) (opt 1mm))
+	(constraint (type via_drill) (min 0.4mm) (opt 0.4mm))
+)
+
+(rule "Switching nodes (buck/charger SW pins -- keep short/direct as well as wide)"
+	(condition "A.NetName == 'U4_SW' || A.NetName == 'U3_SW1' || A.NetName == 'U3_SW2'")
+	(constraint (type track_width) (min 0.8mm) (opt 1mm))
+)

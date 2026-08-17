@@ -4,9 +4,12 @@ A battery-powered 660nm red light therapy panel. 4S2P 18650 Li-ion pack
 (~74Wh-class), USB-C PD charging, ~74W LED load across two independently
 PWM-dimmable channels, STM32-based control with a 4-button HMI.
 
-KiCad 10 hardware project — schematic + BOM. PCB layout/routing is out of
-scope for this pass (`red-light-panel.kicad_pcb` exists as a valid,
-correctly-stacked-up empty board file, ready for layout).
+KiCad 10 hardware project — schematic + BOM. PCB placement/routing is
+out of scope for this pass, but the board is fab-ready to route against:
+2-layer, 1oz/1oz copper, JLCPCB-standard-service design rules with
+margin (not run at the fabrication limit) — see
+`docs/pcb_fabrication_rules.md` for the exact values and rationale.
+All 153 components are imported onto the board from the schematic.
 
 ## Architecture
 
