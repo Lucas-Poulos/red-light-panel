@@ -159,13 +159,13 @@ def build():
 
     # USB_VBUS is externally sourced (the USB-C cable/charger), never
     # driven by a power_out pin anywhere in this design -- needs a flag.
-    # GND likewise has no genuine power_out driver anywhere in the project.
-    # VBAT and 3V3 are NOT flagged here: BQ25792's BAT pin (power_out) and
-    # sheet 3's buck regulator VOUT pin are genuine drivers for those nets
-    # project-wide, and PWR_FLAG conflicts with a genuine power_out pin on
-    # the same net (confirmed empirically -- see docs/design_notes.md).
-    add_pwr_flag(sch, "USB_VBUS", 20, 70, embedded)
-    add_pwr_flag(sch, "GND", 40, 70, embedded)
+    # GND gets exactly one PWR_FLAG project-wide, placed on sheet 1 --
+    # PWR_FLAG symbols on the SAME merged net across multiple sheets
+    # conflict with EACH OTHER once the hierarchy is combined (confirmed
+    # empirically at full-hierarchy ERC; see docs/design_notes.md), so
+    # only one is needed/allowed anywhere. VBAT is not flagged: BQ25792's
+    # BAT pin (power_out) is a genuine driver for it project-wide.
+    add_pwr_flag(sch, "USB_VBUS", 20, 70, embedded, flag_id="2")
 
     out = "/Users/lucaspoulos/kicad-projects/red-light-panel/02_usbc_charging.kicad_sch"
     print(write_and_upgrade(sch, out))

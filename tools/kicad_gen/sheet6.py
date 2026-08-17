@@ -17,10 +17,16 @@ finalizing firmware/pinout.
   stock symbol (ties internally to VDD) -- C18 is wired to the same
   VDD/GND nets as the other decoupling, as a larger bulk cap for analog
   noise immunity, per the BOM's own description of its purpose.
-- **D6** (ESD array, exposed digital lines): wired across the 4 HMI
+- **Renumbered D6/D7 -> D69/D70** (FLAG): the original BOM's own ranges
+  collide -- D5-D68 (64 LED array elements, sheet 5) numerically includes
+  D6, D7, and D8, which the BOM separately assigns to this sheet's ESD
+  arrays and sheet 7's status LED. Kept the LED array's documented D5-D68
+  range intact (it's the range with an exact count constraint) and moved
+  these two out of the way instead.
+- **D69** (ESD array, exposed digital lines): wired across the 4 HMI
   button inputs (BTN_PWR/DIMP/DIMM/MODE) -- the lines most exposed to
   user/enclosure-edge ESD.
-- **D7** (ESD array, SWD lines/J7 breakout): wired across SWDIO/SWCLK/
+- **D70** (ESD array, SWD lines/J7 breakout): wired across SWDIO/SWCLK/
   NRST; its 4th channel is left NC (3V3/GND on the J7 breakout don't need
   transient protection the same way signal lines do).
 - **STAT_LED_R** does NOT touch this sheet -- per the brief's own net map
@@ -105,13 +111,13 @@ def build():
           x=100, y=70, mpn="PREC005SAAN-RC", manufacturer="Sullins", digikey_pn="S7036-ND",
           datasheet="https://www.sullinscorp.com/media/UserFiles/document/PREC005SAAN-RC.pdf"),
 
-        P(ref="D6", lib_file="PROJECT", entry_name="TPD4E001DBVR", nickname="red-light-panel",
+        P(ref="D69", lib_file="PROJECT", entry_name="TPD4E001DBVR", nickname="red-light-panel",
           value="TPD4E001DBVR (corrected from BOM's TPD4E001DZDR -- flag)", footprint="Package_TO_SOT_SMD:SOT-23-6",
           pins={"1": "BTN_PWR", "2": "GND", "3": "BTN_DIMP", "4": "BTN_DIMM", "5": "BTN_MODE", "6": "3V3"},
           x=140, y=70, mpn="TPD4E001DBVR", manufacturer="Texas Instruments",
           digikey_pn="296-TPD4E001DBVRCT-ND", datasheet="https://www.ti.com/lit/ds/symlink/tpd4e001.pdf"),
 
-        P(ref="D7", lib_file="PROJECT", entry_name="TPD4E001DBVR", nickname="red-light-panel",
+        P(ref="D70", lib_file="PROJECT", entry_name="TPD4E001DBVR", nickname="red-light-panel",
           value="TPD4E001DBVR (corrected from BOM's TPD4E001DZDR -- flag)", footprint="Package_TO_SOT_SMD:SOT-23-6",
           pins={"1": "SWDIO", "2": "GND", "3": "SWCLK", "4": "NRST", "5": "NC", "6": "3V3"},
           x=175, y=70, mpn="TPD4E001DBVR", manufacturer="Texas Instruments",
@@ -121,10 +127,9 @@ def build():
     for part in parts:
         add_part(sch, part, PROJECT, embedded)
 
-    # 3V3's genuine driver lives on sheet 3; GND still needs a flag here
-    # since this sheet has power_in pins on it (U7 VSS) and no local
-    # power_out source.
-    add_pwr_flag(sch, "GND", 60, 90, embedded)
+    # 3V3's one project-wide PWR_FLAG lives on sheet 3, GND's on sheet 1
+    # -- not repeated here (multiple PWR_FLAGs on the same merged net
+    # conflict with each other once the hierarchy is combined).
 
     out = "/Users/lucaspoulos/kicad-projects/red-light-panel/06_mcu_control.kicad_sch"
     print(write_and_upgrade(sch, out))

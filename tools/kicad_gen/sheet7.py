@@ -4,11 +4,15 @@ Sheet 7 -- HMI (buttons + status LED).
 - SW1-4 wired as active-high buttons: 3V3 -> switch -> BTN_x -> pull-down
   resistor (R9-R12) -> GND. Reads high when pressed, low (via pull-down)
   when released.
-- **D8 is single-color** (per your decision -- the original BOM MPN,
+- **Renumbered D8 -> D71** (FLAG): the original BOM's own D5-D68 (64 LED
+  array elements, sheet 5) numerically includes D8. Kept the LED array's
+  documented range intact and moved this one out of the way instead --
+  see sheet6.py's docstring for the same issue with D6/D7.
+- **D71 is single-color** (per your decision -- the original BOM MPN,
   APTD1608LSECK/J4-PRV, doesn't match any real bi-color datasheet; the
   closest confirmed real part under that family name,
   APT1608LSECK/J4-PRV, is a single-color 605nm orange 2-pin LED). Wired
-  as: 3V3 -> R13 (current limit) -> D8 anode; D8 cathode -> STAT_LED_R,
+  as: 3V3 -> R13 (current limit) -> D71 anode; D71 cathode -> STAT_LED_R,
   which is BQ25792's open-collector STAT output (sheet 2) -- classic
   active-low open-drain LED drive (STAT sinks to light the LED when
   charging is active).
@@ -55,7 +59,7 @@ def build():
                    value="680R (calc vs Vf/If, flag)", footprint="Resistor_SMD:R_0603_1608Metric",
                    pins={"1": "3V3", "2": "D8_A"}, x=160, y=20,
                    mpn="RC0603FR-07680RL", manufacturer="Yageo", digikey_pn="311-680HRCT-ND", datasheet=""))
-    parts.append(P(ref="D8", lib_file="Device", entry_name="LED", nickname="Device",
+    parts.append(P(ref="D71", lib_file="Device", entry_name="LED", nickname="Device",
                    value="APT1608LSECK/J4-PRV (single-color, corrected per your decision)",
                    footprint="LED_SMD:LED_0603_1608Metric",
                    pins={"1": "STAT_LED_R", "2": "D8_A"}, x=175, y=20,
@@ -65,7 +69,9 @@ def build():
     for part in parts:
         add_part(sch, part, PROJECT, embedded)
 
-    add_pwr_flag(sch, "GND", 20, 60, embedded)
+    # GND's one project-wide PWR_FLAG lives on sheet 1 -- not repeated
+    # here (multiple PWR_FLAGs on the same merged net conflict with each
+    # other once the hierarchy is combined).
 
     out = "/Users/lucaspoulos/kicad-projects/red-light-panel/07_hmi.kicad_sch"
     print(write_and_upgrade(sch, out))

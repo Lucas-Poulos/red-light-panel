@@ -99,6 +99,52 @@ check doesn't misfire. `PWR_FLAG` symbols are placed with `in_bom no` /
 `on_board no`, matching KiCad convention -- they're a paper annotation for
 ERC, not a real component.
 
+**Exactly one `PWR_FLAG` per net, project-wide.** Placing one per sheet
+(the initial approach, since each sheet's ERC was validated standalone
+before the root hierarchy existed) breaks at full-hierarchy scale: two or
+more `PWR_FLAG`s on the same merged global-label net trigger their own
+`pin_to_pin` "Power output and Power output are connected" error against
+each other. Also: a pin typed `output` (e.g. a buck regulator's `SW` pin)
+does *not* satisfy `power_pin_not_driven` the way a `power_out`-typed pin
+does -- don't assume a rail is "genuinely driven" without checking the
+actual electrical type of the pin that's supposed to be driving it.
+
+**Each `PWR_FLAG`'s `Reference` must be unique project-wide.** Every
+instance defaulting to the literal `#FLG` (rather than an
+auto-incrementing `#FLG1`, `#FLG2`, ...) is invisible to `kicad-cli sch
+erc` but trips `kicad-cli sch export bom`'s annotation check once more
+than one exists across the hierarchy -- a real KiCad GUI session
+auto-numbers these the first time you run Annotate, but nothing here ever
+calls that, so `add_pwr_flag()` takes an explicit `flag_id` argument.
+
+### Root sheet: per-symbol `instances` blocks
+
+`kicad-cli sch upgrade --force` (used while generating/validating each
+sheet standalone, before the root sheet existed) silently drops every
+placed symbol's `(instances (project ...))` block down to an empty
+`(instances)` -- observed empirically, not something this project's code
+or kiutils ever asked it to do. That's invisible to ERC (which works from
+raw geometry) but is exactly what `kicad-cli sch export bom` flags as
+"schematic has annotation errors": each symbol's project-instance
+bookkeeping (which sheet-instance path it belongs to) was empty.
+`tools/kicad_gen/fix_instance_paths.py` is a one-time pass, run after the
+root sheet exists, that populates the real path
+(`/<root-uuid>/<this-sheet's-uuid-on-the-root-sheet>`) via direct text
+surgery -- round-tripping an already-v10-upgraded file back through
+kiutils was tried first and rejected: kiutils' parser doesn't fully
+understand the v10 format `kicad-cli` produces and silently drops most of
+the file's content on that round-trip (a 6,300-line file came back as
+~2,100 lines with no error raised).
+
+### Reference-designator collision in the original BOM
+
+The brief's own BOM has a numbering collision: `D5-D68` (64 LED array
+elements, sheet 5) numerically includes `D6`/`D7` (sheet 6's ESD arrays)
+and `D8` (sheet 7's status LED). Resolved by keeping the LED array's
+documented range intact (it has an exact count constraint: 68-5+1=64) and
+renumbering the other three to `D69`/`D70`/`D71` instead. Flagged in each
+affected sheet's build-script docstring.
+
 ## Flagged additions beyond the literal BOM
 
 A few passives are required by the datasheet-mandated minimum application

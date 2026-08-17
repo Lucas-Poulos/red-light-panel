@@ -1,0 +1,276 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "42616fd0-e647-494b-aa56-d94ba4c08af5")
+	(paper "A3")
+	(title_block
+		(title "Red Light Therapy Panel")
+		(comment 1 "Root sheet -- hierarchy overview")
+	)
+	(lib_symbols)
+	(sheet
+		(at 150 20)
+		(size 55 40)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "30969a0b-99d0-4a3c-a1d1-3b889a5a6cec")
+		(property "Sheetname" "3.3V Logic Rail"
+			(at 150 18.5 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Sheetfile" "03_power_rail_3v3.kicad_sch"
+			(at 150 61.5 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+	)
+	(sheet
+		(at 215 20)
+		(size 55 40)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "460f0d68-65e1-4485-86c7-154afe531473")
+		(property "Sheetname" "LED Drivers"
+			(at 215 18.5 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Sheetfile" "04_led_drivers.kicad_sch"
+			(at 215 61.5 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+	)
+	(sheet
+		(at 150 80)
+		(size 55 40)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "738827e2-f99f-478a-a249-e1a272f6991c")
+		(property "Sheetname" "HMI"
+			(at 150 78.5 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Sheetfile" "07_hmi.kicad_sch"
+			(at 150 121.5 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+	)
+	(sheet
+		(at 85 80)
+		(size 55 40)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "806fcdb0-0aa2-4434-ac98-a2737f8a9cdc")
+		(property "Sheetname" "MCU & Control"
+			(at 85 78.5 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Sheetfile" "06_mcu_control.kicad_sch"
+			(at 85 121.5 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+	)
+	(sheet
+		(at 20 80)
+		(size 55 40)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "8929090f-0ddb-42da-9626-22ad57d5d841")
+		(property "Sheetname" "LED Array"
+			(at 20 78.5 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Sheetfile" "05_led_array.kicad_sch"
+			(at 20 121.5 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+	)
+	(sheet
+		(at 85 20)
+		(size 55 40)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "cee25bfc-8f68-4ab8-92f3-a9010c5e56df")
+		(property "Sheetname" "USB-C Charging Input"
+			(at 85 18.5 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Sheetfile" "02_usbc_charging.kicad_sch"
+			(at 85 61.5 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+	)
+	(sheet
+		(at 20 20)
+		(size 55 40)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "f5e52836-6f85-40ef-9140-3b11a74572f8")
+		(property "Sheetname" "Battery Pack & Protection"
+			(at 20 18.5 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Sheetfile" "01_battery_protection.kicad_sch"
+			(at 20 61.5 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+)

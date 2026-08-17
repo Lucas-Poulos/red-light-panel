@@ -120,10 +120,10 @@ def build():
 
     # VBAT_PROT's only project-wide source is sheet 1's protection FET
     # drain pin, which is typed "passive" (not power_out) -- so unlike
-    # VBAT/3V3, VBAT_PROT has no genuine power_out driver anywhere and
-    # does need a flag. GND likewise always needs one.
-    add_pwr_flag(sch, "GND", 20, 85, embedded)
-    add_pwr_flag(sch, "VBAT_PROT", 35, 85, embedded)
+    # VBAT, VBAT_PROT has no genuine power_out driver anywhere and gets
+    # its one PWR_FLAG here. GND's one project-wide PWR_FLAG lives on
+    # sheet 1 (multiple on the same merged net conflict with each other).
+    add_pwr_flag(sch, "VBAT_PROT", 35, 85, embedded, flag_id="4")
 
     out = "/Users/lucaspoulos/kicad-projects/red-light-panel/04_led_drivers.kicad_sch"
     print(write_and_upgrade(sch, out))

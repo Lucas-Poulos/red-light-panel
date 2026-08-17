@@ -160,7 +160,7 @@ def build():
     # net project-wide, and PWR_FLAG conflicts with a real power_out pin
     # on the same net once the hierarchy is ERC'd together (confirmed
     # empirically; see docs/design_notes.md).
-    add_pwr_flag(sch, "GND", 260, 90, embedded)
+    add_pwr_flag(sch, "GND", 260, 90, embedded, flag_id="1")
 
     out = "/Users/lucaspoulos/kicad-projects/red-light-panel/01_battery_protection.kicad_sch"
     print(write_and_upgrade(sch, out))

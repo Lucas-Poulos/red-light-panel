@@ -249,10 +249,16 @@ def add_global_label(sch: Schematic, net: str, x: float, y: float, shape: str = 
     ))
 
 
-def add_pwr_flag(sch: Schematic, net: str, x: float, y: float, embedded: set, nickname="power"):
+def add_pwr_flag(sch: Schematic, net: str, x: float, y: float, embedded: set, flag_id: str, nickname="power"):
     """Places a Device:PWR_FLAG on `net` to satisfy ERC's power_pin_not_driven
     check without needing a genuine power_out source pin. Excluded from BOM
-    and board per KiCad convention for this symbol."""
+    and board per KiCad convention for this symbol. `flag_id` must be
+    unique project-wide (e.g. "1", "2", ...) -- reusing the literal "#FLG"
+    reference on every instance is what real KiCad annotation expects to
+    auto-number, but since nothing runs the GUI's annotate step here, an
+    unnumbered duplicate reference across sheets trips
+    'kicad-cli sch export bom's annotation check."""
+    ref = f"#FLG{flag_id}"
     sym, base = load_stock_symbol("power", "PWR_FLAG", nickname)
     lib_id = f"{nickname}:PWR_FLAG"
     if lib_id not in embedded:
@@ -265,12 +271,12 @@ def add_pwr_flag(sch: Schematic, net: str, x: float, y: float, embedded: set, ni
         position=Position(x, y, 0), unit=1, inBom=False, onBoard=False, dnp=False,
         uuid=sym_uuid,
         properties=[
-            _prop("Reference", "#FLG", x + 3, y - 3),
+            _prop("Reference", ref, x + 3, y - 3),
             _prop("Value", "PWR_FLAG", x + 3, y - 1),
         ],
         pins={num: str(uuidlib.uuid4()) for num in pins_def},
         instances=[SymbolProjectInstance(name="red-light-panel", paths=[
-            SymbolProjectPath(sheetInstancePath="/", reference="#FLG", unit=1)])],
+            SymbolProjectPath(sheetInstancePath="/", reference=ref, unit=1)])],
     )
     sch.schematicSymbols.append(inst)
     for num, p in pins_def.items():

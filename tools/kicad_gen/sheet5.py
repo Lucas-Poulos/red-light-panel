@@ -110,7 +110,9 @@ def build():
                mpn="", manufacturer="", digikey_pn="", datasheet="")
     add_part(sch, pullup, PROJECT, embedded)
 
-    add_pwr_flag(sch, "GND", 60, 120, embedded)
+    # GND's one project-wide PWR_FLAG lives on sheet 1 -- not repeated
+    # here (multiple PWR_FLAGs on the same merged net conflict with each
+    # other once the hierarchy is combined).
 
     out = "/Users/lucaspoulos/kicad-projects/red-light-panel/05_led_array.kicad_sch"
     print(write_and_upgrade(sch, out))

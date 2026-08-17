@@ -76,13 +76,14 @@ def build():
     for part in parts:
         add_part(sch, part, PROJECT, embedded)
 
-    # 3V3 gets a genuine power_out driver here (TPS563201's SW pin feeds
-    # 3V3 through L1) -- no PWR_FLAG needed for 3V3 project-wide. VBAT
-    # already has a genuine driver on sheet 2 (BQ25792's BAT pin), so it's
-    # not flagged here either (would conflict once the hierarchy merges).
-    # GND still needs one (no genuine power_out pin represents ground
-    # anywhere in the project).
-    add_pwr_flag(sch, "GND", 80, 60, embedded)
+    # TPS563201's SW pin is type "output", not "power_out" -- so despite
+    # feeding 3V3 through L1, there's no genuine power_out pin on this net
+    # anywhere in the project. 3V3 gets its one PWR_FLAG here (where the
+    # rail originates). VBAT is not flagged: BQ25792's BAT pin (power_out,
+    # sheet 2) is a genuine driver for it project-wide. GND's one
+    # project-wide PWR_FLAG lives on sheet 1 (see docs/design_notes.md --
+    # multiple PWR_FLAGs on the same merged net conflict with each other).
+    add_pwr_flag(sch, "3V3", 80, 60, embedded, flag_id="3")
 
     out = "/Users/lucaspoulos/kicad-projects/red-light-panel/03_power_rail_3v3.kicad_sch"
     print(write_and_upgrade(sch, out))
