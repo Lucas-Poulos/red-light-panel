@@ -45,3 +45,7 @@ fp-info-cache
 # --- project-specific exceptions ---
 # Keep the generated BOM CSV under version control (script output, not an ephemeral export)
 !bom/*.csv
+
+# Python (schematic generator tooling)
+__pycache__/
+*.pyc
