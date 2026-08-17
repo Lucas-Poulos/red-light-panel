@@ -41,6 +41,7 @@ from kiutils.schematic import (
 from kiutils.items.common import Position, Effects, Property, PageSettings
 
 STOCK_SYM_DIR = "/Applications/KiCad/KiCad.app/Contents/SharedSupport/symbols"
+PROJECT_LIBS_DIR = "/Users/lucaspoulos/kicad-projects/red-light-panel/libs"
 _lib_cache: dict[str, SymbolLib] = {}
 
 
@@ -48,6 +49,20 @@ def _load_lib(lib_filename: str) -> SymbolLib:
     if lib_filename not in _lib_cache:
         _lib_cache[lib_filename] = SymbolLib.from_file(f"{STOCK_SYM_DIR}/{lib_filename}.kicad_sym")
     return _lib_cache[lib_filename]
+
+
+def load_project_symbol(entry_name: str, nickname: str):
+    """Same idea as load_stock_symbol() but for hand-built/downloaded
+    symbols living in the single merged libs/red-light-panel.kicad_sym
+    (project-local library, matching the project-local sym-lib-table
+    entry)."""
+    cache_key = "PROJECT:red-light-panel"
+    if cache_key not in _lib_cache:
+        _lib_cache[cache_key] = SymbolLib.from_file(f"{PROJECT_LIBS_DIR}/red-light-panel.kicad_sym")
+    lib = _lib_cache[cache_key]
+    sym = copy.deepcopy(next(s for s in lib.symbols if s.entryName == entry_name))
+    sym.libraryNickname = nickname
+    return sym, None
 
 
 def load_stock_symbol(lib_filename: str, entry_name: str, nickname: str):
@@ -113,7 +128,7 @@ class Part:
     sheet: str = ""
     unit: int = 1
     dnp: bool = False
-    project_symbol: Optional[Symbol] = None   # pre-built Symbol for project-local (libs/) parts
+    project_symbol: Optional[str] = None   # libs/<project_symbol>.kicad_sym filename, when lib_file=="PROJECT"
 
 
 def _prop(key, value, x, y, hide=False, show_name=False):
@@ -144,9 +159,7 @@ def add_part(sch: Schematic, part: Part, project_name: str, embedded: set):
     SchematicSymbol instance to `sch`. `embedded` tracks lib_ids already
     copied into sch.libSymbols so repeated part types aren't duplicated."""
     if part.lib_file == "PROJECT":
-        sym = copy.deepcopy(part.project_symbol)
-        sym.libraryNickname = part.nickname
-        base = None
+        sym, base = load_project_symbol(part.entry_name, part.nickname)
     else:
         sym, base = load_stock_symbol(part.lib_file, part.entry_name, part.nickname)
 

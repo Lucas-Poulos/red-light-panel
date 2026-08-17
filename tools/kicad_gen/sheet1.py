@@ -154,11 +154,12 @@ def build():
     # sheet-symbol pins or root-sheet wiring needed. See
     # docs/design_notes.md "Why global labels instead of sheet pins".
 
-    # power flags so ERC's power_pin_not_driven doesn't fire on VBAT/GND
-    # (no genuine power_out pin exists on this sheet's own parts for these
-    # rails -- VBAT/GND are truly sourced off-sheet, at the cell stack
-    # itself and downstream loads respectively)
-    add_pwr_flag(sch, "VBAT", 260, 20, embedded)
+    # GND has no genuine power_out driver anywhere in the project, so it
+    # gets a flag on every sheet that uses it. VBAT is NOT flagged here --
+    # sheet 2's BQ25792 BAT pin (power_out) is a genuine driver for this
+    # net project-wide, and PWR_FLAG conflicts with a real power_out pin
+    # on the same net once the hierarchy is ERC'd together (confirmed
+    # empirically; see docs/design_notes.md).
     add_pwr_flag(sch, "GND", 260, 90, embedded)
 
     out = "/Users/lucaspoulos/kicad-projects/red-light-panel/01_battery_protection.kicad_sch"
